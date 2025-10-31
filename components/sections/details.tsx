@@ -492,13 +492,13 @@ export function Details() {
             {/* Image section with enhanced effects */}
             <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] bg-gradient-to-br from-[#402921]/5 via-white/80 to-[#CDAC77]/15 overflow-hidden">
               {/* Shimmer effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 animate-shimmer opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 animate-shimmer opacity-0 group-hover:opacity-100 transition-opacity duration-1000 z-0" />
               
               <Image
                 src={showImageModal === 'ceremony' ? "/Details/church.png" : "/Details/D-L-Garden.png"}
                 alt={showImageModal === 'ceremony' ? siteConfig.ceremony.location : siteConfig.reception.location}
                 fill
-                className="object-contain p-6 sm:p-8 md:p-10 transition-transform duration-700 group-hover:scale-105"
+                className="object-contain p-6 sm:p-8 md:p-10 transition-transform duration-700 group-hover:scale-105 z-10"
                 sizes="95vw"
                 priority
               />
