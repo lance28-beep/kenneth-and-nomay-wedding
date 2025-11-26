@@ -95,55 +95,35 @@ export default function MessageWallDisplay({ messages, loading }: MessageWallDis
       {visibleMessages.map((msg, index) => (
         <Card
           key={index}
-          className={`relative border border-[#324D3E]/35 shadow-lg bg-white/45 backdrop-blur-2xl hover:shadow-2xl hover:border-[#324D3E]/60 transition-all duration-500 group overflow-hidden transform rounded-xl sm:rounded-2xl hover:scale-[1.01] ${
-            isAnimating ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
+          className={`relative shadow-lg bg-[#F2E1D1]/70 bg-[url('/invitation/White and Beige Floral Minimalist Wedding Invitation - 1.png')] bg-cover bg-center bg-no-repeat backdrop-blur-2xl hover:shadow-2xl transition-all duration-500 group overflow-hidden transform rounded-xl sm:rounded-2xl hover:scale-[1.01] ${
+            isAnimating ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"
           }`}
           style={{
             transitionDelay: `${index * 100}ms`,
-            animation: isAnimating ? 'none' : 'fadeInUp 0.6s ease-out forwards',
-            boxShadow: '0 4px 22px rgba(50, 77, 62, 0.18), 0 2px 10px rgba(0,0,0,0.08)'
+            animation: isAnimating ? "none" : "fadeInUp 0.6s ease-out forwards",
+            boxShadow: "0 4px 22px rgba(190, 135, 130, 0.22), 0 2px 10px rgba(0,0,0,0.08)",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.boxShadow = '0 10px 32px rgba(50, 77, 62, 0.3), 0 6px 18px rgba(0,0,0,0.12)';
+            e.currentTarget.style.boxShadow =
+              "0 10px 32px rgba(190, 135, 130, 0.32), 0 6px 18px rgba(0,0,0,0.12)";
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.boxShadow = '0 4px 22px rgba(50, 77, 62, 0.18), 0 2px 10px rgba(0,0,0,0.08)';
+            e.currentTarget.style.boxShadow =
+              "0 4px 22px rgba(190, 135, 130, 0.22), 0 2px 10px rgba(0,0,0,0.08)";
           }}
         >
-          {/* Enhanced card background effects */}
-          <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-[#8EA58B]/10 opacity-60 group-hover:opacity-90 transition-opacity duration-300"></div>
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#324D3E]/35 via-[#8EA58B]/45 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-          <div className="absolute -inset-[1px] rounded-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ boxShadow: 'inset 0 0 0 1px rgba(50, 77, 62, 0.25)' }} />
-          
-          {/* Subtle shimmer effect on hover */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-          
-          {/* Decorative inner border */}
-          <div className="absolute inset-2 sm:inset-3 rounded-xl pointer-events-none">
-            {/* Main decorative border */}
-            <div className="absolute inset-0 rounded-xl border border-white/30 group-hover:border-[#324D3E]/40 transition-colors duration-300"></div>
-            
-            {/* Corner decorations */}
-            <div className="absolute top-0 left-0 w-5 h-5 border-t-2 border-l-2 border-[#324D3E]/30 rounded-tl-xl group-hover:border-[#324D3E]/50 transition-colors duration-300"></div>
-            <div className="absolute top-0 right-0 w-5 h-5 border-t-2 border-r-2 border-[#8EA58B]/30 rounded-tr-xl group-hover:border-[#8EA58B]/50 transition-colors duration-300"></div>
-            <div className="absolute bottom-0 left-0 w-5 h-5 border-b-2 border-l-2 border-[#8EA58B]/30 rounded-bl-xl group-hover:border-[#8EA58B]/50 transition-colors duration-300"></div>
-            <div className="absolute bottom-0 right-0 w-5 h-5 border-b-2 border-r-2 border-white/40 rounded-br-xl group-hover:border-white/70 transition-colors duration-300"></div>
-            
-            {/* Gradient overlay on border */}
-            <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-[#324D3E]/10 via-transparent to-[#8EA58B]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            
-            {/* Decorative dots at corners */}
-            <div className="absolute -top-1 -left-1 w-2 h-2 bg-[#324D3E]/40 rounded-full group-hover:bg-[#324D3E]/60 transition-colors duration-300"></div>
-            <div className="absolute -top-1 -right-1 w-2 h-2 bg-[#8EA58B]/40 rounded-full group-hover:bg-[#8EA58B]/60 transition-colors duration-300"></div>
-            <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-[#8EA58B]/40 rounded-full group-hover:bg-[#8EA58B]/60 transition-colors duration-300"></div>
-            <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-white/60 rounded-full group-hover:bg-white transition-colors duration-300"></div>
-          </div>
-          
+          {/* Soft card background effects with warm palette */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#FFFFFF]/80 via-[#F2E1D1]/80 to-[#DEAB98]/70 opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+          {/* Soft top highlight line */}
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#BE8782]/40 via-[#E9AA9B]/60 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"></div>
+          {/* Gentle shimmer effect on hover */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/35 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+
           <CardContent className="relative p-2.5 sm:p-3 md:p-4 lg:p-5">
             <div className="flex justify-between items-start mb-2 sm:mb-3 md:mb-4">
               <div className="flex items-center space-x-2 sm:space-x-3 md:space-x-4">
                 <div className="relative">
-                  <div className="w-7 h-7 sm:w-9 sm:h-9 md:w-11 md:h-11 bg-[#324D3E] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg ring-2 ring-white/60">
+                  <div className="w-7 h-7 sm:w-9 sm:h-9 md:w-11 md:h-11 bg-[#BE8782] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg ring-2 ring-[#FFFFFF]/70">
                     <span className="text-white font-lora text-xs sm:text-sm md:text-base font-semibold drop-shadow-sm">
                       {msg.name
                         .split(" ")
@@ -152,13 +132,15 @@ export default function MessageWallDisplay({ messages, loading }: MessageWallDis
                         .toUpperCase()}
                     </span>
                   </div>
-                  {/* Enhanced avatar glow effect */}
-                  <div className="absolute -inset-1 bg-gradient-to-br from-[#324D3E]/35 via-[#8EA58B]/25 to-white/15 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-                  <div className="absolute -inset-2 bg-gradient-to-br from-[#324D3E]/15 to-[#8EA58B]/15 rounded-full blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300 -z-20 animate-pulse"></div>
+                  {/* Soft avatar glow effect */}
+                  <div className="absolute -inset-1 bg-gradient-to-br from-[#BE8782]/35 via-[#E9AA9B]/25 to-white/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+                  <div className="absolute -inset-2 bg-gradient-to-br from-[#DEAB98]/25 to-[#F2E1D1]/25 rounded-full blur-lg opacity-0 group-hover:opacity-60 transition-opacity duration-300 -z-20 animate-pulse"></div>
                 </div>
                 <div className="min-w-0 flex-1">
-                  <h4 className="font-lora text-white text-xs sm:text-sm md:text-base lg:text-lg font-semibold truncate group-hover:text-white transition-colors duration-300">{msg.name}</h4>
-                  <span className="text-[10px] sm:text-xs md:text-sm text-white/70 font-lora group-hover:text-white/90 transition-colors duration-300">
+                  <h4 className="font-lora text-[#BE8782] text-xs sm:text-sm md:text-base lg:text-lg font-semibold truncate group-hover:text-[#BE8782] transition-colors duration-300">
+                    {msg.name}
+                  </h4>
+                  <span className="text-[10px] sm:text-xs md:text-sm text-[#BE8782]/70 font-lora group-hover:text-[#BE8782]/90 transition-colors duration-300">
                     {new Date(msg.timestamp).toLocaleDateString("en-US", {
                       year: "numeric",
                       month: "long",
@@ -170,25 +152,31 @@ export default function MessageWallDisplay({ messages, loading }: MessageWallDis
                 </div>
               </div>
               <div className="flex items-center gap-1.5 sm:gap-2">
-                <Heart className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 text-[#324D3E]/70 fill-transparent group-hover:fill-[#324D3E]/35 group-hover:text-[#324D3E] transition-all duration-300 group-hover:scale-110" />
-                <Sparkles className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-4 md:w-4 text-[#8EA58B]/70 group-hover:text-[#8EA58B] transition-all duration-300 group-hover:scale-110 group-hover:rotate-12" />
+                <Heart className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 text-[#BE8782]/70 fill-transparent group-hover:fill-[#E9AA9B]/60 group-hover:text-[#BE8782] transition-all duration-300 group-hover:scale-110" />
+                <Sparkles className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-4 md:w-4 text-[#DEAB98]/80 group-hover:text-[#E9AA9B] transition-all duration-300 group-hover:scale-110 group-hover:rotate-12" />
               </div>
             </div>
             
             <div className="relative">
-              <span className="absolute -left-0.5 -top-0.5 sm:-left-1 sm:-top-1 md:-left-2 md:-top-2 text-xl sm:text-2xl md:text-4xl text-white/30 font-playfair group-hover:text-white/55 transition-all duration-300 group-hover:scale-110">"</span>
-              <p className="text-white/90 text-xs sm:text-sm md:text-base leading-snug sm:leading-relaxed pl-3 sm:pl-4 md:pl-6 font-lora group-hover:text-white transition-colors duration-300">{msg.message}</p>
-              <span className="absolute -right-0.5 -bottom-0.5 sm:-right-1 sm:-bottom-1 md:-right-2 md:-bottom-2 text-xl sm:text-2xl md:text-4xl text-white/30 font-playfair group-hover:text-white/55 transition-all duration-300 group-hover:scale-110">"</span>
+              <span className="absolute -left-0.5 -top-0.5 sm:-left-1 sm:-top-1 md:-left-2 md:-top-2 text-xl sm:text-2xl md:text-4xl text-[#DEAB98]/50 font-playfair group-hover:text-[#BE8782]/70 transition-all duration-300 group-hover:scale-110">
+                "
+              </span>
+              <p className="text-[#BE8782] text-xs sm:text-sm md:text-base leading-snug sm:leading-relaxed pl-3 sm:pl-4 md:pl-6 font-lora group-hover:text-[#BE8782] transition-colors duration-300">
+                {msg.message}
+              </p>
+              <span className="absolute -right-0.5 -bottom-0.5 sm:-right-1 sm:-bottom-1 md:-right-2 md:-bottom-2 text-xl sm:text-2xl md:text-4xl text-[#DEAB98]/50 font-playfair group-hover:text-[#BE8782]/70 transition-all duration-300 group-hover:scale-110">
+                "
+              </span>
             </div>
             
-            {/* Enhanced message bottom accent */}
+            {/* Enhanced message bottom accent using warm tones */}
             <div className="mt-2 sm:mt-3 md:mt-4 flex items-center justify-between">
-              <div className="flex items-center gap-0.5 sm:gap-1 text-[9px] sm:text-[10px] text-white/70">
-                <div className="w-1 h-1 rounded-full bg-[#324D3E]/60"></div>
-                <div className="w-1 h-1 rounded-full bg-[#8EA58B]/60"></div>
-                <div className="w-1 h-1 rounded-full bg-white/70"></div>
+              <div className="flex items-center gap-0.5 sm:gap-1 text-[9px] sm:text-[10px] text-[#BE8782]/70">
+                <div className="w-1 h-1 rounded-full bg-[#BE8782]/70"></div>
+                <div className="w-1 h-1 rounded-full bg-[#E9AA9B]/80"></div>
+                <div className="w-1 h-1 rounded-full bg-[#FFFFFF]/80"></div>
               </div>
-              <div className="w-14 sm:w-16 h-0.5 bg-gradient-to-r from-transparent via-[#324D3E]/45 via-[#8EA58B]/55 to-transparent group-hover:via-[#324D3E]/70 group-hover:via-[#8EA58B]/80 transition-all duration-300"></div>
+              <div className="w-14 sm:w-16 h-0.5 bg-gradient-to-r from-transparent via-[#BE8782]/60 via-[#E9AA9B]/70 to-transparent group-hover:via-[#BE8782]/80 group-hover:via-[#DEAB98]/90 transition-all duration-300"></div>
             </div>
           </CardContent>
         </Card>

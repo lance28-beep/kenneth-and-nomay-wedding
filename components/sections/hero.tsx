@@ -3,42 +3,12 @@
 import { useEffect, useState, useMemo } from "react"
 import { Heart, Sparkles, Download } from "lucide-react"
 
-const desktopImages = [
-    "/desktop-background/couple (1).jpg",
-    "/desktop-background/couple (2).jpg",
-    "/desktop-background/couple (3).jpg",
-    "/desktop-background/couple (4).jpg",
-    "/desktop-background/couple (5).jpg",
-    "/desktop-background/couple (6).jpg",
-    "/desktop-background/couple (7).jpg",
-    "/desktop-background/couple (8).jpg",
-    "/desktop-background/couple (9).jpg",
-    "/desktop-background/couple (10).jpg",
-    "/desktop-background/couple (11).jpg",
-    "/desktop-background/couple (12).jpg",
-    "/desktop-background/couple (13).jpg",
-    "/desktop-background/couple (14).jpg",
-    "/desktop-background/couple (15).jpg",
+// Temporary hero background per client request
+const heroBackgroundImage = "/images/hero Background.jpg"
 
-]
+const desktopImages = [heroBackgroundImage]
 
-const mobileImages = [
-    "/mobile-background/couple (1).jpg",
-    "/mobile-background/couple (2).jpg",
-    "/mobile-background/couple (3).jpg",
-    "/mobile-background/couple (4).jpg",
-    "/mobile-background/couple (5).jpg",
-    "/mobile-background/couple (6).jpg",
-    "/mobile-background/couple (7).jpg",
-    "/mobile-background/couple (8).jpg",
-    "/mobile-background/couple (9).jpg",
-    "/mobile-background/couple (10).jpg",
-    "/mobile-background/couple (11).jpg",
-    "/mobile-background/couple (12).jpg",
-    "/mobile-background/couple (13).jpg",
-    "/mobile-background/couple (14).jpg",
-    "/mobile-background/couple (15).jpg",
-]
+const mobileImages = [heroBackgroundImage]
 
 export function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -107,7 +77,7 @@ export function Hero() {
   }, [imagesLoaded])
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#BCCFC0]">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#F2E1D1]">
       <div className="absolute inset-0 w-full h-full">
         {imagesLoaded && backgroundImages.map((image, index) => (
           <div
@@ -124,9 +94,9 @@ export function Hero() {
             }}
           />
         ))}
-        {/* Enhanced gradient overlay with better depth */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#A1857A]/65 via-[#E6CFC9]/35 to-transparent z-0" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#8EA58B]/55 via-[#8EA58B]/35 to-transparent z-0" />
+        {/* Enhanced gradient overlay with better depth - Dusty Pink & Beige */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#BE8782]/65 via-[#F2E1D1]/35 to-transparent z-0" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#E9AA9B]/55 via-[#DEAB98]/35 to-transparent z-0" />
       </div>
 
       {isMobile && (
@@ -157,37 +127,47 @@ export function Hero() {
               </p>
             </div>
 
+            {/* Bible Verse */}
+            <div className="max-w-2xl text-[#FFFFFF] italic text-center px-4" style={{ textShadow: "0 6px 18px rgba(0,0,0,0.45)" }}>
+              <p className="text-[10px] sm:text-xs md:text-sm lg:text-base tracking-wide">
+                "We love because He first loved us."
+              </p>
+              <p className="text-[9px] sm:text-[10px] md:text-xs lg:text-sm tracking-wider mt-1">
+                — 1 John 4:19
+              </p>
+            </div>
+
             {/* Divider with icons */}
             <div className="flex items-center justify-center gap-2 md:gap-3 text-[#FFFFFF]" style={{ textShadow: "0 4px 12px rgba(0,0,0,0.45)" }}>
-              <span className="h-px w-10 md:w-14 lg:w-16 bg-gradient-to-r from-transparent via-[#E6CFC9] to-[#E6CFC9]/60" />
-              <Heart size={12} className="text-[#E6CFC9] fill-[#E6CFC9]/30 md:w-4 md:h-4" />
-              <Sparkles size={11} className="text-[#E6CFC9] md:w-3.5 md:h-3.5" />
-              <Heart size={12} className="text-[#E6CFC9] fill-[#E6CFC9]/30 md:w-4 md:h-4" />
-              <span className="h-px w-10 md:w-14 lg:w-16 bg-gradient-to-l from-transparent via-[#E6CFC9] to-[#E6CFC9]/60" />
+              <span className="h-px w-10 md:w-14 lg:w-16 bg-gradient-to-r from-transparent via-[#F2E1D1] to-[#F2E1D1]/60" />
+              <Heart size={12} className="text-[#F2E1D1] fill-[#F2E1D1]/30 md:w-4 md:h-4" />
+              <Sparkles size={11} className="text-[#F2E1D1] md:w-3.5 md:h-3.5" />
+              <Heart size={12} className="text-[#F2E1D1] fill-[#F2E1D1]/30 md:w-4 md:h-4" />
+              <span className="h-px w-10 md:w-14 lg:w-16 bg-gradient-to-l from-transparent via-[#F2E1D1] to-[#F2E1D1]/60" />
             </div>
 
             {/* Names */}
             <div className="space-y-1 sm:space-y-1.5 md:space-y-2 lg:space-y-3">
               <h1
-                className="imperial-script-regular text-[2.75rem] sm:text-[3rem] md:text-[3.75rem] lg:text-[4.5rem] xl:text-[5rem] text-[#FFFFFF] leading-tight"
+                className="windsong-medium text-[2.75rem] sm:text-[3rem] md:text-[3.75rem] lg:text-[4.5rem] xl:text-[5rem] text-[#FFFFFF] leading-tight"
                 style={{
                   textShadow:
-                    "0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(230, 207, 201, 0.4), 0 0 40px rgba(230, 207, 201, 0.3), 0 0 50px rgba(230, 207, 201, 0.2), 0 12px 26px rgba(0,0,0,0.45)",
+                    "0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(242, 225, 209, 0.4), 0 0 40px rgba(242, 225, 209, 0.3), 0 0 50px rgba(242, 225, 209, 0.2), 0 12px 26px rgba(0,0,0,0.45)",
                 }}
               >
-                Mario
+                Kenneth
               </h1>
-              <span className="text-[11px] sm:text-xs md:text-sm lg:text-base uppercase tracking-[0.22em] md:tracking-[0.28em] lg:tracking-[0.35em] text-[#E6CFC9]" style={{ textShadow: "0 6px 18px rgba(0,0,0,0.4)" }}>
+              <span className="text-[11px] sm:text-xs md:text-sm lg:text-base uppercase tracking-[0.22em] md:tracking-[0.28em] lg:tracking-[0.35em] text-[#F2E1D1]" style={{ textShadow: "0 6px 18px rgba(0,0,0,0.4)" }}>
                 and
               </span>
               <h2
-                className="imperial-script-regular text-[2.75rem] sm:text-[3rem] md:text-[3.75rem] lg:text-[4.5rem] xl:text-[5rem] text-[#FFFFFF] leading-tight"
+                className="windsong-medium text-[2.75rem] sm:text-[3rem] md:text-[3.75rem] lg:text-[4.5rem] xl:text-[5rem] text-[#FFFFFF] leading-tight"
                 style={{
                   textShadow:
-                    "0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(230, 207, 201, 0.4), 0 0 40px rgba(230, 207, 201, 0.3), 0 0 50px rgba(230, 207, 201, 0.2), 0 12px 26px rgba(0,0,0,0.45)",
+                    "0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(242, 225, 209, 0.4), 0 0 40px rgba(242, 225, 209, 0.3), 0 0 50px rgba(242, 225, 209, 0.2), 0 12px 26px rgba(0,0,0,0.45)",
                 }}
               >
-                Kaye Celine
+                Nomay
               </h2>
             </div>
 
@@ -202,41 +182,41 @@ export function Hero() {
             {/* Featured date layout */}
             <div className="w-full max-w-4xl mt-2 sm:mt-3 md:mt-5 lg:mt-6 text-[#FFFFFF]" style={{ textShadow: "0 6px 18px rgba(0,0,0,0.45)" }}>
               <div className="flex flex-col items-center gap-1.5 sm:gap-3 md:gap-4 lg:gap-5 uppercase">
-                <span className="text-[10px] sm:text-sm md:text-base tracking-[0.45em] sm:tracking-[0.75em]">
-                  February
+                <span className="text-[9px] sm:text-sm md:text-base tracking-[0.45em] sm:tracking-[0.75em]">
+                  June
                 </span>
                 <div className="flex w-full items-center gap-2 sm:gap-4 md:gap-6">
                   <div className="flex flex-1 items-center gap-2 sm:gap-4">
                     <span className="h-[1px] flex-1 bg-white/70" />
-                    <span className="text-[9px] sm:text-xs md:text-sm tracking-[0.35em] sm:tracking-[0.6em]">
-                      Friday
+                    <span className="text-[8px] sm:text-xs md:text-sm tracking-[0.32em] sm:tracking-[0.6em]">
+                      Wed
                     </span>
                     <span className="h-[1px] w-8 sm:w-10 md:w-12 bg-white/70" />
                   </div>
                   <div className="relative flex items-center justify-center px-2 sm:px-4 md:px-8 lg:px-10">
                     <span
                       aria-hidden="true"
-                      className="absolute inset-0 mx-auto h-[80%] max-h-[220px] w-[120px] sm:w-[180px] md:w-[220px] rounded-full bg-gradient-to-b from-[#E6CFC9] via-[#BCCFC0] to-[#8EA58B] blur-[32px] opacity-80"
+                      className="absolute inset-0 mx-auto h-[80%] max-h-[220px] w-[120px] sm:w-[180px] md:w-[220px] rounded-full bg-gradient-to-b from-[#F2E1D1] via-[#E9AA9B] to-[#BE8782] blur-[32px] opacity-80"
                     />
                     <span
-                      className="relative font-tiktok text-[2.85rem] sm:text-[4.25rem] md:text-[5.5rem] lg:text-[6.5rem] leading-none tracking-[0.06em]"
+                      className="relative font-tiktok text-[2rem] sm:text-[4.25rem] md:text-[5.5rem] lg:text-[6.5rem] leading-none tracking-[0.05em]"
                       style={{
                         color: "#FFFFFF",
-                        backgroundImage: "linear-gradient(180deg, #FFFFFF 10%, #E6CFC9 60%, #BCCFC0 100%)",
+                        backgroundImage: "linear-gradient(180deg, #FFFFFF 10%, #F2E1D1 60%, #E9AA9B 100%)",
                         WebkitBackgroundClip: "text",
                         backgroundClip: "text",
                         textShadow:
-                          "0 0 30px rgba(255, 255, 255, 0.85), 0 0 70px rgba(230, 207, 201, 0.7), 0 0 120px rgba(188, 207, 192, 0.55), 0 18px 45px rgba(0,0,0,0.65)",
-                        filter: "drop-shadow(0 0 15px rgba(230, 207, 201, 0.6))",
+                          "0 0 30px rgba(255, 255, 255, 0.85), 0 0 70px rgba(242, 225, 209, 0.7), 0 0 120px rgba(233, 170, 155, 0.55), 0 18px 45px rgba(0,0,0,0.65)",
+                        filter: "drop-shadow(0 0 15px rgba(242, 225, 209, 0.6))",
                       }}
                     >
-                      06
+                      24
                     </span>
                   </div>
                   <div className="flex flex-1 items-center gap-2 sm:gap-4 justify-end">
                     <span className="h-[1px] w-8 sm:w-10 md:w-12 bg-white/70" />
-                    <span className="text-[9px] sm:text-xs md:text-sm tracking-[0.28em] sm:tracking-[0.45em]">
-                      1:00 PM
+                    <span className="text-[8px] sm:text-xs md:text-sm tracking-[0.27em] sm:tracking-[0.45em]">
+                      2:30 PM
                     </span>
                     <span className="h-[1px] flex-1 bg-white/70" />
                   </div>
@@ -248,23 +228,33 @@ export function Hero() {
             </div>
 
             {/* Ceremony & location */}
-            <div className="text-center space-y-1 md:space-y-1.5 text-[#FFFFFF] uppercase" style={{ textShadow: "0 6px 18px rgba(0,0,0,0.45)" }}>
-              <p className="text-[9px] sm:text-xs md:text-sm lg:text-base tracking-[0.12em] md:tracking-[0.16em] lg:tracking-[0.2em]">
-                Ceremony & Reception
-              </p>
-              <p className="text-[10px] sm:text-xs md:text-sm tracking-[0.3em] sm:tracking-[0.35em]">
-                ORCHID GARDEN SUITES MANILA
-              </p>
-              <p className="text-[9px] sm:text-xs md:text-sm tracking-[0.15em] sm:tracking-[0.2em]">
-                620 Pablo Ocampo Street, Malate, Manila
-              </p>
+            <div className="text-center space-y-1.5 md:space-y-2 text-[#FFFFFF] uppercase" style={{ textShadow: "0 6px 18px rgba(0,0,0,0.45)" }}>
+              <div>
+                <p className="text-[9px] sm:text-xs md:text-sm lg:text-base tracking-[0.12em] md:tracking-[0.16em] lg:tracking-[0.2em]">
+                  Ceremony
+                </p>
+                <p className="text-[10px] sm:text-xs md:text-sm tracking-[0.3em] sm:tracking-[0.35em]">
+                  Our Lady of Lourdes Parish
+                </p>
+                <p className="text-[9px] sm:text-xs md:text-sm tracking-[0.15em] sm:tracking-[0.2em]">
+                  Tagaytay
+                </p>
+              </div>
+              <div>
+                <p className="text-[9px] sm:text-xs md:text-sm lg:text-base tracking-[0.12em] md:tracking-[0.16em] lg:tracking-[0.2em]">
+                  Reception
+                </p>
+                <p className="text-[10px] sm:text-xs md:text-sm tracking-[0.3em] sm:tracking-[0.35em]">
+                  Infinity Tagaytay Events Place
+                </p>
+              </div>
             </div>
 
             {/* CTA Buttons & download */}
             <div className="mt-4 md:mt-6 lg:mt-8 flex w-full flex-row flex-wrap items-center justify-center gap-2 sm:gap-3 md:gap-4">
               <a
                 href="#narrative"
-                className="group flex-1 min-w-[140px] md:min-w-[160px] lg:min-w-[180px] rounded-full border border-[#E6CFC9]/40 bg-[#324D3E] px-4 md:px-6 lg:px-8 py-2 md:py-2.5 lg:py-3 text-[10px] md:text-xs lg:text-sm uppercase tracking-[0.12em] md:tracking-[0.16em] lg:tracking-[0.2em] text-[#FFFFFF] backdrop-blur-sm transition-all duration-300 hover:bg-[#324D3E]/90"
+                className="group flex-1 min-w-[140px] md:min-w-[160px] lg:min-w-[180px] rounded-full border border-[#F2E1D1]/40 bg-[#BE8782] px-4 md:px-6 lg:px-8 py-2 md:py-2.5 lg:py-3 text-[10px] md:text-xs lg:text-sm uppercase tracking-[0.12em] md:tracking-[0.16em] lg:tracking-[0.2em] text-[#FFFFFF] backdrop-blur-sm transition-all duration-300 hover:bg-[#BE8782]/90"
               >
                 <span className="flex items-center justify-center">
                   Our Story
@@ -272,16 +262,16 @@ export function Hero() {
               </a>
               <a
                 href="#guest-list"
-                className="group flex-1 min-w-[140px] md:min-w-[160px] lg:min-w-[180px] rounded-full border border-[#E6CFC9]/40 bg-[#738A6E] px-4 md:px-6 lg:px-8 py-2 md:py-2.5 lg:py-3 text-[10px] md:text-xs lg:text-sm uppercase tracking-[0.12em] md:tracking-[0.16em] lg:tracking-[0.2em] text-[#FFFFFF] backdrop-blur-sm transition-all duration-300 hover:bg-[#738A6E]/90"
+                className="group flex-1 min-w-[140px] md:min-w-[160px] lg:min-w-[180px] rounded-full border border-[#F2E1D1]/40 bg-[#E9AA9B] px-4 md:px-6 lg:px-8 py-2 md:py-2.5 lg:py-3 text-[10px] md:text-xs lg:text-sm uppercase tracking-[0.12em] md:tracking-[0.16em] lg:tracking-[0.2em] text-[#FFFFFF] backdrop-blur-sm transition-all duration-300 hover:bg-[#E9AA9B]/90"
               >
                 <span className="flex items-center justify-center">
                   RSVP
                 </span>
               </a>
               <a
-                href="/invitation/image.png"
-                download="Mario-Kaye-Invitation.png"
-                className="group flex-none rounded-full border border-[#E6CFC9]/40 bg-[#BCCFC0] px-3.5 md:px-5 lg:px-6 py-2 md:py-2.5 lg:py-3 text-[11px] md:text-xs lg:text-sm uppercase tracking-[0.15em] md:tracking-[0.18em] lg:tracking-[0.22em] text-[#FFFFFF] backdrop-blur-sm transition-all duration-300 hover:bg-[#BCCFC0]/90"
+                href="/invitation/White and Beige Floral Minimalist Wedding Invitation - 1.png"
+                download="Kenneth-Nomay-Wedding-Invitation.png"
+                className="group flex-none rounded-full border border-[#F2E1D1]/40 bg-[#DEAB98] px-3.5 md:px-5 lg:px-6 py-2 md:py-2.5 lg:py-3 text-[11px] md:text-xs lg:text-sm uppercase tracking-[0.15em] md:tracking-[0.18em] lg:tracking-[0.22em] text-[#FFFFFF] backdrop-blur-sm transition-all duration-300 hover:bg-[#DEAB98]/90"
               >
                 <span className="flex items-center justify-center gap-1.5 md:gap-2">
                   <Download size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" />

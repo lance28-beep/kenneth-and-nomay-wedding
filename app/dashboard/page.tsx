@@ -129,7 +129,7 @@ export default function DashboardPage() {
   })
 
   // Password - you can change this!
-  const DASHBOARD_PASSWORD = "062026" // Change this to your preferred password
+  const DASHBOARD_PASSWORD = "242026" // Change this to your preferred password
 
   // Check if already authenticated
   useEffect(() => {
@@ -871,28 +871,28 @@ export default function DashboardPage() {
 
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen bg-[#D9E5D7] flex items-center justify-center p-4">
+      <div className="min-h-screen bg-[#F2E1D1] flex items-center justify-center p-4">
         <div className="w-full max-w-md">
-          <div className="bg-white rounded-3xl p-8 shadow-2xl border-2 border-[#738A6E]/30">
+          <div className="bg-white rounded-3xl p-8 shadow-2xl border-2 border-[#DEAB98]/40">
             <div className="text-center mb-8">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-[#738A6E] rounded-full mb-3">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-[#BE8782] rounded-full mb-3">
                 <Lock className="h-10 w-10 text-white" />
               </div>
-              <div className="text-xs tracking-[0.2em] uppercase font-semibold text-[#324D3E] mb-2">welcome Mario
+              <div className="text-xs tracking-[0.2em] uppercase font-semibold text-[#BE8782] mb-2">welcome Kenneth
 and
-Kaye Celine
+Nomay
 </div>
-              <h1 className="text-3xl font-serif font-bold text-[#324D3E] mb-2">
+              <h1 className="text-3xl font-serif font-bold text-[#BE8782] mb-2">
                 Wedding Dashboard
               </h1>
-              <p className="text-[#324D3E]/70 font-sans">
+              <p className="text-[#BE8782]/80 font-sans">
                 Enter password to access
               </p>
             </div>
 
             <form onSubmit={handleLogin} className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-[#324D3E] mb-2 font-sans">
+                <label className="block text-sm font-medium text-[#BE8782] mb-2 font-sans">
                   Password
                 </label>
                 <input
@@ -900,21 +900,21 @@ Kaye Celine
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter dashboard password"
-                  className="w-full px-4 py-3 border-2 border-[#738A6E]/20 focus:border-[#738A6E] rounded-xl font-sans placeholder:text-[#324D3E]/40 transition-all duration-300 focus:ring-4 focus:ring-[#738A6E]/10"
+                  className="w-full px-4 py-3 border-2 border-[#DEAB98]/50 focus:border-[#BE8782] rounded-xl font-sans placeholder:text-[#BE8782]/40 transition-all duration-300 focus:ring-4 focus:ring-[#E9AA9B]/40"
                   autoFocus
                 />
               </div>
 
               {error && (
-                <div className="bg-[#324D3E]/20 border-2 border-[#324D3E]/40 rounded-xl p-3 flex items-center gap-2">
-                  <AlertCircle className="h-5 w-5 text-[#324D3E]" />
-                  <span className="text-[#324D3E] font-semibold text-sm">{error}</span>
+                <div className="bg-[#E9AA9B]/20 border-2 border-[#E9AA9B]/60 rounded-xl p-3 flex items-center gap-2">
+                  <AlertCircle className="h-5 w-5 text-[#BE8782]" />
+                  <span className="text-[#BE8782] font-semibold text-sm">{error}</span>
                 </div>
               )}
 
               <Button
                 type="submit"
-                className="w-full bg-[#738A6E] hover:bg-[#324D3E] text-white py-3 rounded-xl font-semibold transition-colors"
+                className="w-full bg-[#BE8782] hover:bg-[#E9AA9B] text-white py-3 rounded-xl font-semibold transition-colors"
               >
                 Access Dashboard
               </Button>
@@ -926,9 +926,9 @@ Kaye Celine
   }
 
   return (
-    <div className="min-h-screen bg-[#D9E5D7]">
+    <div className="min-h-screen bg-[#F2E1D1]">
       {/* Header */}
-      <div className="bg-[#738A6E] shadow-lg">
+      <div className="bg-[#BE8782] shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
             <div>
@@ -946,7 +946,7 @@ Kaye Celine
                 disabled={isLoading}
                 variant="outline"
                 size="sm"
-                className="bg-white/20 border-white/50 text-white hover:bg-white/30"
+                className="bg-white/20 border-white/50 text-white hover:bg-white/40"
               >
                 <RefreshCw className={`h-4 w-4 ${isLoading ? 'animate-spin' : ''}`} />
                 Refresh
@@ -955,7 +955,7 @@ Kaye Celine
                 onClick={handleLogout}
                 variant="outline"
                 size="sm"
-                className="bg-white/20 border-white/50 text-white hover:bg-white/30"
+                className="bg-white/20 border-white/50 text-white hover:bg-white/40"
               >
                 <Lock className="h-4 w-4" />
                 Logout
@@ -968,73 +968,73 @@ Kaye Celine
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Stats Cards */}
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 mb-6">
-          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#738A6E]/30">
+          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#DEAB98]/60">
             <div className="flex items-center justify-between mb-2">
-              <Users className="h-6 w-6 sm:h-8 sm:w-8 text-[#738A6E]" />
-              <span className="text-2xl sm:text-3xl font-bold text-[#324D3E]">{stats.totalGuests}</span>
+              <Users className="h-6 w-6 sm:h-8 sm:w-8 text-[#BE8782]" />
+              <span className="text-2xl sm:text-3xl font-bold text-[#BE8782]">{stats.totalGuests}</span>
             </div>
-            <p className="text-xs sm:text-sm text-[#324D3E]/70 font-sans">Total Guests</p>
-            <p className="text-xs text-[#324D3E]/50 font-sans mt-1">{stats.total} entries</p>
+            <p className="text-xs sm:text-sm text-[#BE8782]/80 font-sans">Total Guests</p>
+            <p className="text-xs text-[#BE8782]/60 font-sans mt-1">{stats.total} entries</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#738A6E]/30">
+          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#DEAB98]/60">
             <div className="flex items-center justify-between mb-2">
-              <CheckCircle className="h-6 w-6 sm:h-8 sm:w-8 text-[#738A6E]" />
-              <span className="text-2xl sm:text-3xl font-bold text-[#738A6E]">{stats.attending}</span>
+              <CheckCircle className="h-6 w-6 sm:h-8 sm:w-8 text-[#BE8782]" />
+              <span className="text-2xl sm:text-3xl font-bold text-[#BE8782]">{stats.attending}</span>
             </div>
-            <p className="text-xs sm:text-sm text-[#324D3E]/70 font-sans">Attending</p>
+            <p className="text-xs sm:text-sm text-[#BE8782]/80 font-sans">Attending</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#324D3E]/30">
+          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#DEAB98]/60">
             <div className="flex items-center justify-between mb-2">
-              <XCircle className="h-6 w-6 sm:h-8 sm:w-8 text-[#324D3E]" />
-              <span className="text-2xl sm:text-3xl font-bold text-[#324D3E]">{stats.notAttending}</span>
+              <XCircle className="h-6 w-6 sm:h-8 sm:w-8 text-[#BE8782]" />
+              <span className="text-2xl sm:text-3xl font-bold text-[#BE8782]">{stats.notAttending}</span>
             </div>
-            <p className="text-xs sm:text-sm text-[#324D3E]/70 font-sans">Not Attending</p>
+            <p className="text-xs sm:text-sm text-[#BE8782]/80 font-sans">Not Attending</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#324D3E]/30">
+          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#DEAB98]/60">
             <div className="flex items-center justify-between mb-2">
-              <AlertCircle className="h-6 w-6 sm:h-8 sm:w-8 text-[#324D3E]" />
-              <span className="text-2xl sm:text-3xl font-bold text-[#324D3E]">{stats.pending}</span>
+              <AlertCircle className="h-6 w-6 sm:h-8 sm:w-8 text-[#BE8782]" />
+              <span className="text-2xl sm:text-3xl font-bold text-[#BE8782]">{stats.pending}</span>
             </div>
-            <p className="text-xs sm:text-sm text-[#324D3E]/70 font-sans">Pending</p>
+            <p className="text-xs sm:text-sm text-[#BE8782]/80 font-sans">Pending</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#324D3E]/30">
+          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#DEAB98]/60">
             <div className="flex items-center justify-between mb-2">
-              <Bell className="h-6 w-6 sm:h-8 sm:w-8 text-[#324D3E]" />
-              <span className="text-2xl sm:text-3xl font-bold text-[#324D3E]">{guestRequests.length}</span>
+              <Bell className="h-6 w-6 sm:h-8 sm:w-8 text-[#BE8782]" />
+              <span className="text-2xl sm:text-3xl font-bold text-[#BE8782]">{guestRequests.length}</span>
             </div>
-            <p className="text-xs sm:text-sm text-[#324D3E]/70 font-sans">Requests</p>
+            <p className="text-xs sm:text-sm text-[#BE8782]/80 font-sans">Requests</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#324D3E]/30">
+          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#DEAB98]/60">
             <div className="flex items-center justify-between mb-2">
-              <Crown className="h-6 w-6 sm:h-8 sm:w-8 text-[#324D3E]" />
-              <span className="text-2xl sm:text-3xl font-bold text-[#324D3E]">{entourage.length}</span>
+              <Crown className="h-6 w-6 sm:h-8 sm:w-8 text-[#BE8782]" />
+              <span className="text-2xl sm:text-3xl font-bold text-[#BE8782]">{entourage.length}</span>
             </div>
-            <p className="text-xs sm:text-sm text-[#324D3E]/70 font-sans">Entourage</p>
+            <p className="text-xs sm:text-sm text-[#BE8782]/80 font-sans">Entourage</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#324D3E]/30">
+          <div className="bg-white rounded-2xl p-6 shadow-md border border-[#DEAB98]/60">
             <div className="flex items-center justify-between mb-2">
-              <UserPlus className="h-6 w-6 sm:h-8 sm:w-8 text-[#324D3E]" />
-              <span className="text-2xl sm:text-3xl font-bold text-[#324D3E]">{principalSponsors.length}</span>
+              <UserPlus className="h-6 w-6 sm:h-8 sm:w-8 text-[#BE8782]" />
+              <span className="text-2xl sm:text-3xl font-bold text-[#BE8782]">{principalSponsors.length}</span>
             </div>
-            <p className="text-xs sm:text-sm text-[#324D3E]/70 font-sans">Principal Sponsors</p>
+            <p className="text-xs sm:text-sm text-[#BE8782]/80 font-sans">Principal Sponsors</p>
           </div>
         </div>
 
         {/* Tabs */}
-        <div className="bg-white rounded-2xl p-1 sm:p-2 shadow-md border border-[#738A6E]/30 mb-6">
+        <div className="bg-white rounded-2xl p-1 sm:p-2 shadow-md border border-[#DEAB98]/60 mb-6">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-1 sm:gap-2">
             <button
               onClick={() => setActiveTab("guests")}
               className={`w-full px-3 py-2 sm:px-4 sm:py-3 rounded-lg sm:rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2 ${
                 activeTab === "guests"
-                  ? "bg-[#738A6E] text-white shadow-lg"
-                  : "text-[#324D3E] hover:bg-[#738A6E]/20"
+                  ? "bg-[#BE8782] text-white shadow-lg"
+                  : "text-[#BE8782] hover:bg-[#F2E1D1]"
               }`}
             >
               <Users className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -1044,14 +1044,14 @@ Kaye Celine
               onClick={() => setActiveTab("requests")}
               className={`w-full px-3 py-2 sm:px-4 sm:py-3 rounded-lg sm:rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2 relative ${
                 activeTab === "requests"
-                  ? "bg-[#738A6E] text-white shadow-lg"
-                  : "text-[#324D3E] hover:bg-[#738A6E]/20"
+                  ? "bg-[#BE8782] text-white shadow-lg"
+                  : "text-[#BE8782] hover:bg-[#F2E1D1]"
               }`}
             >
               <Bell className="h-4 w-4 sm:h-5 sm:w-5" />
               Guest Requests
               {guestRequests.length > 0 && (
-                <span className="absolute -top-1 -right-1 bg-[#324D3E] text-white text-[10px] sm:text-xs font-bold rounded-full min-w-[18px] h-4 sm:min-w-[20px] sm:h-5 px-1 flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 bg-[#BE8782] text-white text-[10px] sm:text-xs font-bold rounded-full min-w-[18px] h-4 sm:min-w-[20px] sm:h-5 px-1 flex items-center justify-center">
                   {guestRequests.length > 99 ? '99+' : guestRequests.length}
                 </span>
               )}
@@ -1060,8 +1060,8 @@ Kaye Celine
               onClick={() => setActiveTab("entourage")}
               className={`w-full px-3 py-2 sm:px-4 sm:py-3 rounded-lg sm:rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2 ${
                 activeTab === "entourage"
-                  ? "bg-[#738A6E] text-white shadow-lg"
-                  : "text-[#324D3E] hover:bg-[#738A6E]/20"
+                  ? "bg-[#BE8782] text-white shadow-lg"
+                  : "text-[#BE8782] hover:bg-[#F2E1D1]"
               }`}
             >
               <Crown className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -1071,8 +1071,8 @@ Kaye Celine
               onClick={() => setActiveTab("principalsponsor")}
               className={`w-full px-3 py-2 sm:px-4 sm:py-3 rounded-lg sm:rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2 ${
                 activeTab === "principalsponsor"
-                  ? "bg-[#738A6E] text-white shadow-lg"
-                  : "text-[#324D3E] hover:bg-[#738A6E]/20"
+                  ? "bg-[#BE8782] text-white shadow-lg"
+                  : "text-[#BE8782] hover:bg-[#F2E1D1]"
               }`}
             >
               <UserPlus className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -1085,17 +1085,17 @@ Kaye Celine
         {activeTab === "guests" && (
           <>
         {/* Search and Add Guest */}
-        <div className="bg-white rounded-2xl p-6 shadow-md border border-[#738A6E]/30 mb-6">
+        <div className="bg-white rounded-2xl p-6 shadow-md border border-[#DEAB98]/60 mb-6">
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between mb-4">
             <div className="flex-1 w-full">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-[#324D3E]/40" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-[#BE8782]/40" />
                 <input
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search guests by name or email..."
-                  className="w-full pl-10 pr-4 py-2 border-2 border-[#738A6E]/30 focus:border-[#738A6E] rounded-xl font-sans placeholder:text-[#324D3E]/40 transition-all duration-300 focus:ring-4 focus:ring-[#738A6E]/10 bg-white"
+                  className="w-full pl-10 pr-4 py-2 border-2 border-[#DEAB98]/60 focus:border-[#BE8782] rounded-xl font-sans placeholder:text-[#BE8782]/40 transition-all duration-300 focus:ring-4 focus:ring-[#E9AA9B]/40 bg-white"
                 />
               </div>
             </div>
@@ -1106,7 +1106,7 @@ Kaye Celine
                 setEditModalOpen(false)
                 setFormData({ Name: "", Email: "", RSVP: "", Guest: "", Message: "" })
               }}
-              className="bg-[#738A6E] hover:bg-[#324D3E] text-white transition-colors"
+              className="bg-[#BE8782] hover:bg-[#E9AA9B] text-white transition-colors"
             >
               <Plus className="h-4 w-4 mr-2" />
               Add Guest
@@ -1115,44 +1115,44 @@ Kaye Celine
 
           {/* Success/Error Messages */}
           {successMessage && (
-            <div className="bg-[#738A6E]/20 border-2 border-[#738A6E]/40 rounded-xl p-3 mb-4 flex items-center gap-2">
-              <CheckCircle className="h-5 w-5 text-[#738A6E]" />
-              <span className="text-[#324D3E] font-semibold text-sm">{successMessage}</span>
+            <div className="bg-[#E9AA9B]/20 border-2 border-[#E9AA9B]/60 rounded-xl p-3 mb-4 flex items-center gap-2">
+              <CheckCircle className="h-5 w-5 text-[#BE8782]" />
+              <span className="text-[#BE8782] font-semibold text-sm">{successMessage}</span>
             </div>
           )}
 
           {error && (
-            <div className="bg-[#324D3E]/20 border-2 border-[#324D3E]/40 rounded-xl p-3 mb-4 flex items-center gap-2">
-              <AlertCircle className="h-5 w-5 text-[#324D3E]" />
-              <span className="text-[#324D3E] font-semibold text-sm">{error}</span>
+            <div className="bg-[#F2E1D1]/60 border-2 border-[#DEAB98]/80 rounded-xl p-3 mb-4 flex items-center gap-2">
+              <AlertCircle className="h-5 w-5 text-[#BE8782]" />
+              <span className="text-[#BE8782] font-semibold text-sm">{error}</span>
             </div>
           )}
 
         </div>
 
         {/* Guest List */}
-        <div className="bg-white rounded-2xl shadow-md border border-[#738A6E]/30 overflow-hidden">
+        <div className="bg-white rounded-2xl shadow-md border border-[#DEAB98]/60 overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-[#D9E5D7]">
+              <thead className="bg-[#F2E1D1]">
                 <tr>
-                  <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Name</th>
-                  <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Email</th>
-                  <th className="text-center px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">RSVP</th>
-                  <th className="text-center px-6 py-4 text-sm font-bold text-[#324D3E] font-sans whitespace-nowrap">
+                  <th className="text-left px-6 py-4 text-sm font-bold text-[#BE8782] font-sans">Name</th>
+                  <th className="text-left px-6 py-4 text-sm font-bold text-[#BE8782] font-sans">Email</th>
+                  <th className="text-center px-6 py-4 text-sm font-bold text-[#BE8782] font-sans">RSVP</th>
+                  <th className="text-center px-6 py-4 text-sm font-bold text-[#BE8782] font-sans whitespace-nowrap">
                     <span className="flex items-center justify-center gap-1">
                       <Users className="h-4 w-4" />
                       Guests
                     </span>
                   </th>
-                  <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Message</th>
-                  <th className="text-center px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Actions</th>
+                  <th className="text-left px-6 py-4 text-sm font-bold text-[#BE8782] font-sans">Message</th>
+                  <th className="text-center px-6 py-4 text-sm font-bold text-[#BE8782] font-sans">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#738A6E]/20">
+              <tbody className="divide-y divide-[#F2E1D1]">
                 {filteredGuests.length === 0 ? (
                   <tr>
-                    <td colSpan={6} className="px-6 py-12 text-center text-[#324D3E]/60 font-sans">
+                    <td colSpan={6} className="px-6 py-12 text-center text-[#BE8782]/70 font-sans">
                       {isLoading ? (
                         <div className="flex items-center justify-center gap-2">
                           <RefreshCw className="h-5 w-5 animate-spin" />
@@ -1165,26 +1165,26 @@ Kaye Celine
                   </tr>
                 ) : (
                   filteredGuests.map((guest, index) => (
-                    <tr key={index} className="hover:bg-[#738A6E]/15 transition-colors bg-white">
-                      <td className="px-6 py-4 font-medium text-[#324D3E] font-sans">{guest.Name}</td>
-                      <td className="px-6 py-4 text-[#324D3E]/70 font-sans">
+                    <tr key={index} className="hover:bg-[#F2E1D1]/60 transition-colors bg-white">
+                      <td className="px-6 py-4 font-medium text-[#BE8782] font-sans">{guest.Name}</td>
+                      <td className="px-6 py-4 text-[#BE8782]/80 font-sans">
                         {guest.Email && guest.Email !== "Pending" ? guest.Email : "-"}
                       </td>
                       <td className="px-6 py-4 text-center">
                         {guest.RSVP === "Yes" && (
-                          <span className="inline-flex items-center gap-1 px-3 py-1 bg-[#738A6E]/30 text-[#324D3E] rounded-full text-sm font-semibold border border-[#738A6E]/40">
+                          <span className="inline-flex items-center gap-1 px-3 py-1 bg-[#DEAB98]/40 text-[#BE8782] rounded-full text-sm font-semibold border border-[#DEAB98]/70">
                             <CheckCircle className="h-4 w-4" />
                             Attending
                           </span>
                         )}
                         {guest.RSVP === "No" && (
-                          <span className="inline-flex items-center gap-1 px-3 py-1 bg-[#324D3E]/30 text-[#324D3E] rounded-full text-sm font-semibold border border-[#324D3E]/40">
+                          <span className="inline-flex items-center gap-1 px-3 py-1 bg-[#E9AA9B]/40 text-[#BE8782] rounded-full text-sm font-semibold border border-[#E9AA9B]/70">
                             <XCircle className="h-4 w-4" />
                             Not Attending
                           </span>
                         )}
                         {guest.RSVP === "Maybe" && (
-                          <span className="inline-flex items-center gap-1 px-3 py-1 bg-[#8EA58B]/60 text-[#324D3E] rounded-full text-sm font-semibold border border-[#8EA58B]/70">
+                          <span className="inline-flex items-center gap-1 px-3 py-1 bg-[#F2E1D1] text-[#BE8782] rounded-full text-sm font-semibold border border-[#DEAB98]/70">
                             <AlertCircle className="h-4 w-4" />
                             Maybe
                           </span>
@@ -1196,20 +1196,20 @@ Kaye Celine
                         ) : null}
                       </td>
                       <td className="px-6 py-4 text-center">
-                        <span className="inline-flex items-center justify-center px-3 py-1.5 bg-[#738A6E]/30 text-[#324D3E] rounded-full text-sm font-bold min-w-[3.5rem] border border-[#738A6E]/40">
+                        <span className="inline-flex items-center justify-center px-3 py-1.5 bg-[#F2E1D1] text-[#BE8782] rounded-full text-sm font-bold min-w-[3.5rem] border border-[#DEAB98]/70">
                           {guest?.Guest !== undefined && guest?.Guest !== null && guest?.Guest !== '' 
                             ? (parseInt(String(guest.Guest)) || 1) 
                             : 1}
                         </span>
                       </td>
-                      <td className="px-6 py-4 text-[#324D3E]/70 font-sans max-w-xs truncate" title={guest.Message || ""}>
+                      <td className="px-6 py-4 text-[#BE8782]/80 font-sans max-w-xs truncate" title={guest.Message || ""}>
                         {guest.Message || "-"}
                       </td>
                       <td className="px-6 py-4 text-center">
                         <div className="flex items-center justify-center gap-2">
                           <button
                             onClick={() => handleEditClick(guest)}
-                            className="p-2 text-[#738A6E] hover:bg-[#738A6E]/20 rounded-lg transition-colors"
+                            className="p-2 text-[#BE8782] hover:bg-[#F2E1D1] rounded-lg transition-colors"
                             title="Edit guest"
                           >
                             <Edit2 className="h-4 w-4" />
@@ -1242,17 +1242,17 @@ Kaye Celine
         {activeTab === "requests" && (
           <>
             {/* Search Section */}
-            <div className="bg-white rounded-2xl p-6 shadow-md border border-[#738A6E]/30 mb-6">
+            <div className="bg-white rounded-2xl p-6 shadow-md border border-[#DEAB98]/60 mb-6">
               <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between mb-4">
                 <div className="flex-1 w-full">
                   <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-[#324D3E]/40" />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-[#BE8782]/40" />
                     <input
                       type="text"
                       value={searchRequestQuery}
                       onChange={(e) => setSearchRequestQuery(e.target.value)}
                       placeholder="Search requests by name or email..."
-                      className="w-full pl-10 pr-4 py-2 border-2 border-[#738A6E]/20 focus:border-[#738A6E] rounded-xl font-sans placeholder:text-[#324D3E]/40 transition-all duration-300 focus:ring-4 focus:ring-[#738A6E]/20"
+                      className="w-full pl-10 pr-4 py-2 border-2 border-[#DEAB98]/60 focus:border-[#BE8782] rounded-xl font-sans placeholder:text-[#BE8782]/40 transition-all duration-300 focus:ring-4 focus:ring-[#E9AA9B]/40"
                     />
                   </div>
                 </div>
@@ -1260,44 +1260,44 @@ Kaye Celine
 
               {/* Success/Error Messages */}
               {successMessage && (
-                <div className="bg-[#738A6E]/20 border-2 border-[#738A6E]/40 rounded-xl p-3 mb-4 flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-[#738A6E]" />
-                  <span className="text-[#324D3E] font-semibold text-sm">{successMessage}</span>
+                <div className="bg-[#E9AA9B]/20 border-2 border-[#E9AA9B]/60 rounded-xl p-3 mb-4 flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-[#BE8782]" />
+                  <span className="text-[#BE8782] font-semibold text-sm">{successMessage}</span>
                 </div>
               )}
 
               {error && (
-                <div className="bg-[#324D3E]/20 border-2 border-[#324D3E]/40 rounded-xl p-3 mb-4 flex items-center gap-2">
-                  <AlertCircle className="h-5 w-5 text-[#324D3E]" />
-                  <span className="text-[#324D3E] font-semibold text-sm">{error}</span>
+                <div className="bg-[#F2E1D1]/60 border-2 border-[#DEAB98]/80 rounded-xl p-3 mb-4 flex items-center gap-2">
+                  <AlertCircle className="h-5 w-5 text-[#BE8782]" />
+                  <span className="text-[#BE8782] font-semibold text-sm">{error}</span>
                 </div>
               )}
 
             </div>
 
             {/* Requests List */}
-            <div className="bg-white rounded-2xl shadow-md border border-[#738A6E]/30 overflow-hidden">
+            <div className="bg-white rounded-2xl shadow-md border border-[#DEAB98]/60 overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full">
-                  <thead className="bg-[#D9E5D7]">
+                  <thead className="bg-[#F2E1D1]">
                     <tr>
-                      <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Name</th>
-                      <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Email</th>
-                      <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Phone</th>
-                      <th className="text-center px-6 py-4 text-sm font-bold text-[#324D3E] font-sans whitespace-nowrap">
+                      <th className="text-left px-6 py-4 text-sm font-bold text-[#BE8782] font-sans">Name</th>
+                      <th className="text-left px-6 py-4 text-sm font-bold text-[#BE8782] font-sans">Email</th>
+                      <th className="text-left px-6 py-4 text-sm font-bold text-[#BE8782] font-sans">Phone</th>
+                      <th className="text-center px-6 py-4 text-sm font-bold text-[#BE8782] font-sans whitespace-nowrap">
                         <span className="flex items-center justify-center gap-1">
                           <Users className="h-4 w-4" />
                           Guests
                         </span>
                       </th>
-                      <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Message</th>
-                      <th className="text-center px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Actions</th>
+                      <th className="text-left px-6 py-4 text-sm font-bold text-[#BE8782] font-sans">Message</th>
+                      <th className="text-center px-6 py-4 text-sm font-bold text-[#BE8782] font-sans">Actions</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-[#738A6E]/20">
+                  <tbody className="divide-y divide-[#F2E1D1]">
                     {filteredRequests.length === 0 ? (
                       <tr>
-                        <td colSpan={6} className="px-6 py-12 text-center text-[#324D3E]/60 font-sans">
+                        <td colSpan={6} className="px-6 py-12 text-center text-[#BE8782]/70 font-sans">
                           {isLoading ? (
                             <div className="flex items-center justify-center gap-2">
                               <RefreshCw className="h-5 w-5 animate-spin" />
@@ -1310,29 +1310,29 @@ Kaye Celine
                       </tr>
                     ) : (
                       filteredRequests.map((request, index) => (
-                        <tr key={index} className="hover:bg-[#738A6E]/15 transition-colors bg-white">
-                          <td className="px-6 py-4 font-medium text-[#324D3E] font-sans">{request.Name}</td>
-                          <td className="px-6 py-4 text-[#324D3E]/70 font-sans">
+                        <tr key={index} className="hover:bg-[#F2E1D1]/60 transition-colors bg-white">
+                          <td className="px-6 py-4 font-medium text-[#BE8782] font-sans">{request.Name}</td>
+                          <td className="px-6 py-4 text-[#BE8782]/80 font-sans">
                             {request.Email && request.Email !== "Pending" ? request.Email : "-"}
                           </td>
-                          <td className="px-6 py-4 text-[#324D3E]/70 font-sans">
+                          <td className="px-6 py-4 text-[#BE8782]/80 font-sans">
                             {request.Phone || "-"}
                           </td>
                           <td className="px-6 py-4 text-center">
-                            <span className="inline-flex items-center justify-center px-3 py-1.5 bg-[#738A6E]/20 text-[#738A6E] rounded-full text-sm font-bold min-w-[3.5rem] border border-[#738A6E]/30">
+                            <span className="inline-flex items-center justify-center px-3 py-1.5 bg-[#F2E1D1] text-[#BE8782] rounded-full text-sm font-bold min-w-[3.5rem] border border-[#DEAB98]/70">
                               {request?.Guest !== undefined && request?.Guest !== null && request?.Guest !== '' 
                                 ? (parseInt(String(request.Guest)) || 1) 
                                 : 1}
                             </span>
                           </td>
-                          <td className="px-6 py-4 text-[#324D3E]/70 font-sans max-w-xs truncate">
+                          <td className="px-6 py-4 text-[#BE8782]/80 font-sans max-w-xs truncate">
                             {request.Message || "-"}
                           </td>
                           <td className="px-6 py-4 text-center">
                             <div className="flex items-center justify-center gap-2">
                               <button
                                 onClick={() => handleAddRequestToGuestListClick(request)}
-                                className="px-4 py-2 bg-[#738A6E] hover:bg-[#324D3E] text-white rounded-lg transition-colors font-semibold text-sm flex items-center gap-2 shadow-md hover:shadow-lg"
+                                className="px-4 py-2 bg-[#BE8782] hover:bg-[#E9AA9B] text-white rounded-lg transition-colors font-semibold text-sm flex items-center gap-2 shadow-md hover:shadow-lg"
                                 title="Add to guest list"
                               >
                                 <UserCheck className="h-4 w-4" />
@@ -1366,17 +1366,17 @@ Kaye Celine
         {activeTab === "entourage" && (
           <>
             {/* Search Section */}
-            <div className="bg-white rounded-2xl p-6 shadow-md border border-[#738A6E]/30 mb-6">
+            <div className="bg-white rounded-2xl p-6 shadow-md border border-[#DEAB98]/60 mb-6">
               <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between mb-4">
                 <div className="flex-1 w-full">
                   <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-[#324D3E]/40" />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-[#BE8782]/40" />
                     <input
                       type="text"
                       value={searchEntourageQuery}
                       onChange={(e) => setSearchEntourageQuery(e.target.value)}
                       placeholder="Search entourage by name, role, or email..."
-                      className="w-full pl-10 pr-4 py-2 border-2 border-[#738A6E]/20 focus:border-[#738A6E] rounded-xl font-sans placeholder:text-[#324D3E]/40 transition-all duration-300 focus:ring-4 focus:ring-[#738A6E]/20"
+                      className="w-full pl-10 pr-4 py-2 border-2 border-[#DEAB98]/60 focus:border-[#BE8782] rounded-xl font-sans placeholder:text-[#BE8782]/40 transition-all duration-300 focus:ring-4 focus:ring-[#E9AA9B]/40"
                     />
                   </div>
                 </div>
@@ -1387,7 +1387,7 @@ Kaye Celine
                     setEntourageFormData({ Name: "", RoleCategory: "", RoleTitle: "", Email: "" })
                     setShowEntourageModal(true)
                   }}
-                className="bg-[#738A6E] hover:bg-[#324D3E] text-white transition-colors"
+                className="bg-[#BE8782] hover:bg-[#E9AA9B] text-white transition-colors"
                 >
                   <Plus className="h-4 w-4 mr-2" />
                   Add Member
@@ -1396,16 +1396,16 @@ Kaye Celine
 
               {/* Success/Error Messages */}
               {successMessage && (
-                <div className="bg-[#738A6E]/20 border-2 border-[#738A6E]/40 rounded-xl p-3 mb-4 flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-[#738A6E]" />
-                  <span className="text-[#324D3E] font-semibold text-sm">{successMessage}</span>
+                <div className="bg-[#E9AA9B]/20 border-2 border-[#E9AA9B]/60 rounded-xl p-3 mb-4 flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-[#BE8782]" />
+                  <span className="text-[#BE8782] font-semibold text-sm">{successMessage}</span>
                 </div>
               )}
 
               {error && (
-                <div className="bg-[#324D3E]/20 border-2 border-[#324D3E]/40 rounded-xl p-3 mb-4 flex items-center gap-2">
-                  <AlertCircle className="h-5 w-5 text-[#324D3E]" />
-                  <span className="text-[#324D3E] font-semibold text-sm">{error}</span>
+                <div className="bg-[#F2E1D1]/60 border-2 border-[#DEAB98]/80 rounded-xl p-3 mb-4 flex items-center gap-2">
+                  <AlertCircle className="h-5 w-5 text-[#BE8782]" />
+                  <span className="text-[#BE8782] font-semibold text-sm">{error}</span>
                 </div>
               )}
 
@@ -1413,22 +1413,22 @@ Kaye Celine
             </div>
 
             {/* Entourage List */}
-            <div className="bg-white rounded-2xl shadow-md border border-[#738A6E]/30 overflow-hidden">
+            <div className="bg-white rounded-2xl shadow-md border border-[#DEAB98]/60 overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full">
-                  <thead className="bg-[#D9E5D7]">
+                  <thead className="bg-[#F2E1D1]">
                     <tr>
-                      <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Name</th>
-                      <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Role Category</th>
-                      <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Role Title</th>
-                      <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Email</th>
-                      <th className="text-center px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Actions</th>
+                      <th className="text-left px-6 py-4 text-sm font-bold text-[#BE8782] font-sans">Name</th>
+                      <th className="text-left px-6 py-4 text-sm font-bold text-[#BE8782] font-sans">Role Category</th>
+                      <th className="text-left px-6 py-4 text-sm font-bold text-[#BE8782] font-sans">Role Title</th>
+                      <th className="text-left px-6 py-4 text-sm font-bold text-[#BE8782] font-sans">Email</th>
+                      <th className="text-center px-6 py-4 text-sm font-bold text-[#BE8782] font-sans">Actions</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-[#738A6E]/20">
+                  <tbody className="divide-y divide-[#F2E1D1]">
                     {filteredEntourage.length === 0 ? (
                       <tr>
-                        <td colSpan={5} className="px-6 py-12 text-center text-[#324D3E]/60 font-sans">
+                        <td colSpan={5} className="px-6 py-12 text-center text-[#BE8782]/70 font-sans">
                           {isLoading ? (
                             <div className="flex items-center justify-center gap-2">
                               <RefreshCw className="h-5 w-5 animate-spin" />
@@ -1441,22 +1441,22 @@ Kaye Celine
                       </tr>
                     ) : (
                       filteredEntourage.map((member, index) => (
-                        <tr key={index} className="hover:bg-[#738A6E]/15 transition-colors bg-white">
-                          <td className="px-6 py-4 font-medium text-[#324D3E] font-sans">{member.Name}</td>
-                          <td className="px-6 py-4 text-[#324D3E]/70 font-sans">
+                        <tr key={index} className="hover:bg-[#F2E1D1]/60 transition-colors bg-white">
+                          <td className="px-6 py-4 font-medium text-[#BE8782] font-sans">{member.Name}</td>
+                          <td className="px-6 py-4 text-[#BE8782]/80 font-sans">
                             {member.RoleCategory || "-"}
                           </td>
-                          <td className="px-6 py-4 text-[#324D3E]/70 font-sans">
+                          <td className="px-6 py-4 text-[#BE8782]/80 font-sans">
                             {member.RoleTitle || "-"}
                           </td>
-                          <td className="px-6 py-4 text-[#324D3E]/70 font-sans">
+                          <td className="px-6 py-4 text-[#BE8782]/80 font-sans">
                             {member.Email && member.Email !== "Pending" ? member.Email : "-"}
                           </td>
                           <td className="px-6 py-4 text-center">
                             <div className="flex items-center justify-center gap-2">
                               <button
                                 onClick={() => handleEditEntourageClick(member)}
-                                className="p-2 text-[#738A6E] hover:bg-[#738A6E]/20 rounded-lg transition-colors"
+                                className="p-2 text-[#BE8782] hover:bg-[#F2E1D1] rounded-lg transition-colors"
                                 title="Edit member"
                               >
                                 <Edit2 className="h-4 w-4" />
@@ -1489,17 +1489,17 @@ Kaye Celine
         {activeTab === "principalsponsor" && (
           <>
             {/* Search Section */}
-            <div className="bg-white rounded-2xl p-6 shadow-md border border-[#738A6E]/30 mb-6">
+            <div className="bg-white rounded-2xl p-6 shadow-md border border-[#DEAB98]/60 mb-6">
               <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between mb-4">
                 <div className="flex-1 w-full">
                   <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-[#324D3E]/40" />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-[#BE8782]/40" />
                     <input
                       type="text"
                       value={searchPrincipalSponsorQuery}
                       onChange={(e) => setSearchPrincipalSponsorQuery(e.target.value)}
                       placeholder="Search by name..."
-                      className="w-full pl-10 pr-4 py-2 border-2 border-[#738A6E]/20 focus:border-[#738A6E] rounded-xl font-sans placeholder:text-[#324D3E]/40 transition-all duration-300 focus:ring-4 focus:ring-[#738A6E]/20"
+                      className="w-full pl-10 pr-4 py-2 border-2 border-[#DEAB98]/60 focus:border-[#BE8782] rounded-xl font-sans placeholder:text-[#BE8782]/40 transition-all duration-300 focus:ring-4 focus:ring-[#E9AA9B]/40"
                     />
                   </div>
                 </div>
@@ -1509,7 +1509,7 @@ Kaye Celine
                     setPrincipalSponsorFormData({ MalePrincipalSponsor: "", FemalePrincipalSponsor: "" })
                     setShowPrincipalSponsorModal(true)
                   }}
-                className="bg-[#738A6E] hover:bg-[#324D3E] text-white transition-colors"
+                className="bg-[#BE8782] hover:bg-[#E9AA9B] text-white transition-colors"
                 >
                   <Plus className="h-4 w-4 mr-2" />
                   Add Sponsors
@@ -1518,36 +1518,36 @@ Kaye Celine
 
               {/* Success/Error Messages */}
               {successMessage && (
-                <div className="bg-[#738A6E]/20 border-2 border-[#738A6E]/40 rounded-xl p-3 mb-4 flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-[#738A6E]" />
-                  <span className="text-[#324D3E] font-semibold text-sm">{successMessage}</span>
+                <div className="bg-[#E9AA9B]/20 border-2 border-[#E9AA9B]/60 rounded-xl p-3 mb-4 flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-[#BE8782]" />
+                  <span className="text-[#BE8782] font-semibold text-sm">{successMessage}</span>
                 </div>
               )}
 
               {error && (
-                <div className="bg-[#324D3E]/20 border-2 border-[#324D3E]/40 rounded-xl p-3 mb-4 flex items-center gap-2">
-                  <AlertCircle className="h-5 w-5 text-[#324D3E]" />
-                  <span className="text-[#324D3E] font-semibold text-sm">{error}</span>
+                <div className="bg-[#F2E1D1]/60 border-2 border-[#DEAB98]/80 rounded-xl p-3 mb-4 flex items-center gap-2">
+                  <AlertCircle className="h-5 w-5 text-[#BE8782]" />
+                  <span className="text-[#BE8782] font-semibold text-sm">{error}</span>
                 </div>
               )}
 
             </div>
 
             {/* PrincipalSponsor List */}
-            <div className="bg-white rounded-2xl shadow-md border border-[#738A6E]/30 overflow-hidden">
+            <div className="bg-white rounded-2xl shadow-md border border-[#DEAB98]/60 overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full">
-                  <thead className="bg-[#D9E5D7]">
+                  <thead className="bg-[#F2E1D1]">
                     <tr>
-                      <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Male Principal Sponsor</th>
-                      <th className="text-left px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Female Principal Sponsor</th>
-                      <th className="text-center px-6 py-4 text-sm font-bold text-[#324D3E] font-sans">Actions</th>
+                      <th className="text-left px-6 py-4 text-sm font-bold text-[#BE8782] font-sans">Male Principal Sponsor</th>
+                      <th className="text-left px-6 py-4 text-sm font-bold text-[#BE8782] font-sans">Female Principal Sponsor</th>
+                      <th className="text-center px-6 py-4 text-sm font-bold text-[#BE8782] font-sans">Actions</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-[#738A6E]/20">
+                  <tbody className="divide-y divide-[#F2E1D1]">
                     {filteredPrincipalSponsors.length === 0 ? (
                       <tr>
-                        <td colSpan={3} className="px-6 py-12 text-center text-[#324D3E]/60 font-sans">
+                        <td colSpan={3} className="px-6 py-12 text-center text-[#BE8782]/70 font-sans">
                           {isLoading ? (
                             <div className="flex items-center justify-center gap-2">
                               <RefreshCw className="h-5 w-5 animate-spin" />
@@ -1560,16 +1560,16 @@ Kaye Celine
                       </tr>
                     ) : (
                       filteredPrincipalSponsors.map((sponsor, index) => (
-                        <tr key={index} className="hover:bg-[#738A6E]/15 transition-colors bg-white">
-                          <td className="px-6 py-4 font-medium text-[#324D3E] font-sans">{sponsor.MalePrincipalSponsor}</td>
-                          <td className="px-6 py-4 text-[#324D3E]/70 font-sans">
+                        <tr key={index} className="hover:bg-[#F2E1D1]/60 transition-colors bg-white">
+                          <td className="px-6 py-4 font-medium text-[#BE8782] font-sans">{sponsor.MalePrincipalSponsor}</td>
+                          <td className="px-6 py-4 text-[#BE8782]/80 font-sans">
                             {sponsor.FemalePrincipalSponsor || "-"}
                           </td>
                           <td className="px-6 py-4 text-center">
                             <div className="flex items-center justify-center gap-2">
                               <button
                                 onClick={() => handleEditPrincipalSponsorClick(sponsor)}
-                                className="p-2 text-[#738A6E] hover:bg-[#738A6E]/20 rounded-lg transition-colors"
+                                className="p-2 text-[#BE8782] hover:bg-[#F2E1D1] rounded-lg transition-colors"
                                 title="Edit sponsors"
                               >
                                 <Edit2 className="h-4 w-4" />

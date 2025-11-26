@@ -3,8 +3,15 @@
 import { useState, useEffect, useMemo, useRef } from "react"
 import Link from "next/link"
 import { siteConfig } from "@/content/site"
-import { Monogram } from "@/components/monogram"
 import StaggeredMenu from "./StaggeredMenu"
+
+const palette = {
+  deepRose: "#BE8782",
+  blush: "#E9AA9B",
+  peach: "#DEAB98",
+  beige: "#F2E1D1",
+  white: "#FFFFFF",
+}
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -79,29 +86,32 @@ export function Navbar() {
   return (
     <nav className={`sticky top-0 z-50 transition-all duration-700 ease-out ${
       isScrolled 
-        ? 'bg-[#324D3E] backdrop-blur-xl shadow-[0_8px_32px_0_rgba(50,77,62,0.45)] border-b border-white/10' 
-        : 'bg-[#324D3E]/95 backdrop-blur-lg border-b border-white/5'
+        ? 'bg-[#BE8782]/95 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(190,135,130,0.35)] border-b border-white/20' 
+        : 'bg-gradient-to-r from-[#BE8782]/90 via-[#DEAB98]/90 to-[#E9AA9B]/90 backdrop-blur-lg border-b border-white/10'
     }`}>
       {/* Elegant glow effect when scrolled */}
       {isScrolled && (
-        <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-white/10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#F2E1D1]/20 via-transparent to-[#F2E1D1]/20 pointer-events-none" />
       )}
       {/* Subtle texture overlay for depth */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-white/5 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#FFFFFF]/10 via-transparent to-[#FFFFFF]/10 pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 relative">
         <div className="flex justify-between items-center h-14 sm:h-16 md:h-20">
           <Link href="#home" className="flex-shrink-0 group relative z-10">
             <div className="relative">
-              <Monogram
-                aria-label={`${siteConfig.couple.groomNickname} & ${siteConfig.couple.brideNickname} monogram`}
-                color="#D9E5D7"
-                className="w-16 sm:w-20 md:w-24 lg:w-28 group-hover:scale-110 group-active:scale-105 transition-all duration-500 drop-shadow-[0_4px_16px_rgba(217,229,215,0.35)] group-hover:drop-shadow-[0_6px_20px_rgba(217,229,215,0.55)]"
-              />
+              <h1 
+                className="windsong-medium text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#F2E1D1] group-hover:scale-105 group-active:scale-100 transition-all duration-500"
+                style={{
+                  textShadow: "0 2px 8px rgba(0,0,0,0.3), 0 0 20px rgba(242,225,209,0.25)"
+                }}
+              >
+                Kenneth & Nomay
+              </h1>
             </div>
             
             {/* Subtle background glow on hover */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#A1857A]/0 via-[#E6CFC9]/15 to-[#A1857A]/0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl -z-10" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#BE8782]/0 via-[#DEAB98]/20 to-[#BE8782]/0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl -z-10" />
           </Link>
 
           <div className="hidden md:flex gap-1 items-center">
@@ -113,20 +123,20 @@ export function Navbar() {
                   href={link.href}
               className={`px-3 lg:px-4 py-2 text-xs lg:text-sm font-medium rounded-lg transition-all duration-500 relative group drop-shadow-md ${
                     isActive 
-                      ? 'text-[#E6CFC9] bg-gradient-to-br from-white/10 via-[#324D3E]/40 to-white/10 backdrop-blur-md shadow-[0_4px_15px_rgba(50,77,62,0.45)] border border-white/30' 
-                      : 'text-white/80 hover:text-white hover:bg-gradient-to-br hover:from-white/5 hover:via-[#324D3E]/30 hover:to-white/5 hover:backdrop-blur-md hover:border hover:border-white/20 hover:shadow-lg hover:scale-105 active:scale-95'
+                      ? 'text-[#FFFFFF] bg-gradient-to-br from-[#DEAB98]/80 via-[#BE8782]/80 to-[#DEAB98]/80 backdrop-blur-md shadow-[0_8px_20px_rgba(190,135,130,0.35)] border border-[#F2E1D1]/60' 
+                      : 'text-white/85 hover:text-white hover:bg-gradient-to-br hover:from-[#FFFFFF]/10 hover:via-[#DEAB98]/20 hover:to-[#FFFFFF]/10 hover:backdrop-blur-md hover:border hover:border-white/30 hover:shadow-lg hover:scale-105 active:scale-95'
                   }`}
                 >
                   {link.label}
-                  <span className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-white via-[#E6CFC9] to-white transition-all duration-500 rounded-full ${
-                    isActive ? 'w-full shadow-[0_0_8px_rgba(255,255,255,0.8)]' : 'w-0 group-hover:w-full group-hover:shadow-[0_0_6px_rgba(255,255,255,0.6)]'
+                  <span className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#FFFFFF] via-[#F2E1D1] to-[#FFFFFF] transition-all duration-500 rounded-full ${
+                    isActive ? 'w-full shadow-[0_0_10px_rgba(242,225,209,0.8)]' : 'w-0 group-hover:w-full group-hover:shadow-[0_0_6px_rgba(242,225,209,0.6)]'
                   }`} />
                   {/* Active indicator dot */}
                   {isActive && (
-                    <div className="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-[#E6CFC9] animate-pulse shadow-[0_0_6px_rgba(255,255,255,0.9)]" />
+                    <div className="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-[#F2E1D1] animate-pulse shadow-[0_0_6px_rgba(255,255,255,0.9)]" />
                   )}
                   {/* Subtle accent on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/10 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#FFFFFF]/15 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
                 </Link>
               )
             })}
@@ -135,18 +145,18 @@ export function Navbar() {
           <div className="md:hidden flex items-center h-full">
             {/* Decorative halo to improve tap target and visual affordance */}
             <div className="relative">
-              <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-white/20 via-[#324D3E]/30 to-transparent blur-md pointer-events-none" />
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-white/20 via-[#BE8782]/30 to-transparent blur-md pointer-events-none" />
               <StaggeredMenu
                 position="left"
                 items={menuItems}
                 socialItems={[]}
                 displaySocials={false}
                 displayItemNumbering={true}
-                menuButtonColor="#E6CFC9"
-                openMenuButtonColor="#C3D8CA"
+                menuButtonColor="#F2E1D1"
+                openMenuButtonColor="#E9AA9B"
                 changeMenuColorOnOpen={true}
-                colors={["#324D3E", "#486957", "#607F6E", "#A8C0AF", "#E6CFC9"]}
-                accentColor="#E6CFC9"
+                colors={["#BE8782", "#DEAB98", "#E9AA9B", "#F2E1D1", "#FFFFFF"]}
+                accentColor="#FFFFFF"
                 isFixed={true}
                 onMenuOpen={() => {}}
                 onMenuClose={() => {}}

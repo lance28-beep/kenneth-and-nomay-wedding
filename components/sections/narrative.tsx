@@ -32,7 +32,7 @@ export function Narrative() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary mb-4 md:mb-6 text-balance drop-shadow-lg tracking-tight">
-            <span className="text-[#324D3E]">Our Love Story</span>
+            <span className="text-[#BE8782]">Our Love Story</span>
           </h2>
           
           {/* Decorative flourish with motif colors */}
@@ -82,9 +82,9 @@ export function Narrative() {
                 sendToBackOnClick={false}
                 cardDimensions={{ width: 240, height: 280 }}
                 cardsData={[
-                  { id: 1, img: "/mobile-background/couple (3).jpg" },
-                  { id: 2, img: "/mobile-background/couple (12).jpg" },
-                  { id: 3, img: "/mobile-background/couple (2).jpg" },
+                  { id: 1, img: "/Couple_img/commiing.png" },
+                  { id: 2, img: "/Couple_img/commiing.png" },
+                  { id: 3, img: "/Couple_img/commiing.png" },
                 ]}
                 animationConfig={{ stiffness: 260, damping: 20 }}
               />
@@ -178,10 +178,10 @@ export function Narrative() {
             <div className="flex justify-center">
               <motion.a
                 href="#guest-list"
-                className="group relative w-full sm:w-auto px-6 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 text-[#FFFFFF] font-sans font-bold text-sm sm:text-base md:text-lg rounded-[2rem] transition-all duration-500 text-center overflow-hidden shadow-xl hover:shadow-2xl border-2 border-[#BCCFC0] hover:border-[#324D3E] hover:text-white"
+                className="group relative w-full sm:w-auto px-6 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 text-[#FFFFFF] font-sans font-bold text-sm sm:text-base md:text-lg rounded-[2rem] transition-all duration-500 text-center overflow-hidden shadow-xl hover:shadow-2xl border-2 border-[#F4C3B8] hover:border-[#BE8782] hover:text-white"
                 style={{ 
-                  backgroundColor: "#324D3E",
-                  boxShadow: "0 10px 40px rgba(50, 77, 62, 0.4), 0 4px 12px rgba(0,0,0,0.3)"
+                  backgroundColor: "#E9AA9B",
+                  boxShadow: "0 10px 40px rgba(233, 170, 155, 0.45), 0 4px 12px rgba(0,0,0,0.2)"
                 }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -189,17 +189,17 @@ export function Narrative() {
                 whileHover={{ scale: 1.05, y: -4 }}
                 whileTap={{ scale: 0.98 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "rgba(50, 77, 62, 0.95)";
-                  e.currentTarget.style.boxShadow = "0 15px 50px rgba(50, 77, 62, 0.6), 0 6px 16px rgba(0,0,0,0.4)";
+                  e.currentTarget.style.backgroundColor = "#E0917D";
+                  e.currentTarget.style.boxShadow = "0 15px 50px rgba(224, 145, 125, 0.6), 0 6px 16px rgba(0,0,0,0.25)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "#324D3E";
-                  e.currentTarget.style.boxShadow = "0 10px 40px rgba(50, 77, 62, 0.4), 0 4px 12px rgba(0,0,0,0.3)";
+                  e.currentTarget.style.backgroundColor = "#E9AA9B";
+                  e.currentTarget.style.boxShadow = "0 10px 40px rgba(233, 170, 155, 0.45), 0 4px 12px rgba(0,0,0,0.2)";
                 }}
               >
                 {/* Pulsing glow effect with motif color */}
                 <motion.div 
-                  className="absolute inset-0 bg-[#324D3E]/35 rounded-[2rem] blur-2xl"
+                  className="absolute inset-0 bg-[#E9AA9B]/40 rounded-[2rem] blur-2xl"
                   animate={{
                     opacity: [0.4, 0.7, 0.4],
                     scale: [1, 1.1, 1],
@@ -212,7 +212,7 @@ export function Narrative() {
                 />
                 {/* Secondary glow with accent color */}
                 <motion.div 
-                  className="absolute inset-0 bg-[#E6CFC9]/20 rounded-[2rem] blur-xl"
+                  className="absolute inset-0 bg-[#F6D7CF]/35 rounded-[2rem] blur-xl"
                   animate={{
                     opacity: [0.2, 0.4, 0.2],
                     scale: [1, 1.15, 1],

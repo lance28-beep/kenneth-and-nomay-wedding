@@ -31,11 +31,11 @@ export function Monogram({
         className="block w-full h-full"
         style={{
           backgroundColor: color,
-          WebkitMaskImage: "url(/monogram/monogram.png)",
+          WebkitMaskImage: "url(/monogram/newmonogram.png)",
           WebkitMaskRepeat: "no-repeat",
           WebkitMaskSize: "contain",
           WebkitMaskPosition: "center",
-          maskImage: "url(/monogram/monogram.png)",
+          maskImage: "url(/monogram/newmonogram.png)",
           maskRepeat: "no-repeat",
           maskSize: "contain",
           maskPosition: "center",

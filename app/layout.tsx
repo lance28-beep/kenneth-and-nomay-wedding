@@ -10,25 +10,25 @@ const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400", variable: "-
 const imperialScript = Imperial_Script({ subsets: ["latin"], weight: "400", variable: "--font-imperial-script" })
 
 export const metadata: Metadata = {
-  title: "Mario & Kaye Celine Wedding | February 06, 2026 | Orchid Garden Suites Manila",
+  title: "Kenneth & Nomay Wedding | June 24, 2026 | Tagaytay",
   description:
-    "Join us in celebrating the wedding of Mario & Kaye Celine on February 06, 2026 at Orchid Garden Suites Manila. A joyful day of love, commitment, and celebration.",
+    "Join us in celebrating the wedding of Kenneth & Nomay on June 24, 2026 in Tagaytay — ceremony at Our Lady of Lourdes Parish and reception at Infinity Tagaytay Events Place. A joyful day of love, faith, and celebration.",
   keywords:
-    "Mario and Kaye Celine wedding, February 06 2026 wedding, Orchid Garden Suites Manila wedding, Manila wedding, wedding invitation website",
+    "Kenneth and Nomay wedding, June 24 2026 wedding, Our Lady of Lourdes Parish Tagaytay, Infinity Tagaytay Events Place, Tagaytay wedding, wedding invitation website",
   authors: [
-    { name: "Mario" },
-    { name: "Kaye Celine" },
+    { name: "Kenneth" },
+    { name: "Nomay" },
   ],
-  creator: "Mario and Kaye Celine",
-  publisher: "Mario and Kaye Celine",
+  creator: "Kenneth and Nomay",
+  publisher: "Kenneth and Nomay",
   formatDetection: {
     email: false,
     address: false,
     telephone: true,
   },
-  metadataBase: new URL("https://mario-and-kayeceline-wedding.vercel.app/"),
+  metadataBase: new URL("https://kenneth-and-nomay-wedding.vercel.app/"),
   alternates: {
-    canonical: "https://mario-and-kayeceline-wedding.vercel.app/",
+    canonical: "https://kenneth-and-nomay-wedding.vercel.app/",
   },
   icons: {
     icon: [
@@ -50,29 +50,29 @@ export const metadata: Metadata = {
   },
   manifest: "/favicon_io/site.webmanifest",
   openGraph: {
-    title: "Mario & Kaye Celine Wedding | February 06, 2026",
+    title: "Kenneth & Nomay Wedding | June 24, 2026",
     description:
-      "Join us in celebrating the wedding of Mario & Kaye Celine on February 06, 2026 at Orchid Garden Suites Manila. A joyful day of love, commitment, and celebration.",
-    url: "https://mario-and-kayeceline-wedding.vercel.app/",
-    siteName: "Mario and Kaye Celine Wedding",
+      "Celebrate with Kenneth & Nomay on June 24, 2026 in Tagaytay — ceremony at Our Lady of Lourdes Parish and reception at Infinity Tagaytay Events Place.",
+    url: "https://kenneth-and-nomay-wedding.vercel.app/",
+    siteName: "Kenneth & Nomay Wedding",
     locale: "en_PH",
     type: "website",
     images: [
       {
-        url: "https://mario-and-kayeceline-wedding.vercel.app/images/mario-kaye-cover.png?v=1",
+        url: "https://kenneth-and-nomay-wedding.vercel.app/Couple_img/image.png",
         width: 1200,
         height: 630,
-        alt: "Mario & Kaye Celine Wedding Invitation - February 06, 2026",
+        alt: "Kenneth & Nomay Wedding Invitation - June 24, 2026",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mario & Kaye Celine Wedding | February 06, 2026",
+    title: "Kenneth & Nomay Wedding | June 24, 2026",
     description:
-      "Join us in celebrating the wedding of Mario & Kaye Celine on February 06, 2026 at Orchid Garden Suites Manila. A joyful day of love, commitment, and celebration.",
-    images: ["https://mario-and-kayeceline-wedding.vercel.app/images/mario-kaye-cover.png?v=1"],
-    creator: "@marioandkayeceline",
+      "Join us in celebrating the wedding of Kenneth & Nomay on June 24, 2026 in Tagaytay — ceremony at Our Lady of Lourdes Parish and reception at Infinity Tagaytay Events Place.",
+    images: ["https://kenneth-and-nomay-wedding.vercel.app/Couple_img/image.png"],
+    creator: "@kennethandnomay",
   },
   robots: {
     index: true,
@@ -92,40 +92,48 @@ export const metadata: Metadata = {
     "application/ld+json": JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Event",
-      name: "Mario & Kaye Celine Wedding",
-      startDate: "2026-02-06T13:00:00+08:00",
-      endDate: "2026-02-06T22:00:00+08:00",
+      name: "Kenneth & Nomay Wedding",
+      startDate: "2026-06-24T14:30:00+08:00",
+      endDate: "2026-06-24T22:00:00+08:00",
       eventStatus: "https://schema.org/EventScheduled",
       eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
       location: [
         {
           "@type": "Place",
-          name: "Orchid Garden Suites Manila",
+          name: "Our Lady of Lourdes Parish",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "620 Pablo Ocampo Street",
-            addressLocality: "Malate, Manila",
+            addressLocality: "Tagaytay",
+            addressCountry: "PH",
+          },
+        },
+        {
+          "@type": "Place",
+          name: "Infinity Tagaytay Events Place",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Tagaytay",
             addressCountry: "PH",
           },
         },
       ],
-      image: ["https://mario-and-kayeceline-wedding.vercel.app/images/mario-kaye-cover.png?v=1"],
+      image: ["https://kenneth-and-nomay-wedding.vercel.app/Couple_img/image.png"],
       description:
-        "Join us in celebrating the wedding of Mario & Kaye Celine on February 06, 2026 at Orchid Garden Suites Manila. A joyful day of love, commitment, and celebration.",
+        "Join us in celebrating the wedding of Kenneth & Nomay on June 24, 2026 in Tagaytay — ceremony at Our Lady of Lourdes Parish and reception at Infinity Tagaytay Events Place. A joyful day of love, faith, and celebration.",
       organizer: {
         "@type": "Person",
-        name: "Mario & Kaye Celine",
+        name: "Kenneth & Nomay",
       },
       offers: {
         "@type": "Offer",
-        url: "https://mario-and-kayeceline-wedding.vercel.app/",
+        url: "https://kenneth-and-nomay-wedding.vercel.app/",
         availability: "https://schema.org/InStock",
         price: "0",
         priceCurrency: "PHP",
       },
-      eventHashtag: "#MarioAndKayeCelineWedding",
+      eventHashtag: "#KennethAndNomayWedding",
     }),
-    "image": "https://mario-and-kayeceline-wedding.vercel.app/images/mario-kaye-cover.png?v=1",
+    "image": "https://kenneth-and-nomay-wedding.vercel.app/Couple_img/image.png",
   },
 }
 
@@ -143,6 +151,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap"
+          rel="stylesheet"
+        />
         <link rel="preload" as="image" href="/mobile-background/DSCF2614-min.jpg" media="(max-width: 767px)" />
         <link rel="preload" as="image" href="/desktop-background/DSCF2444-min.jpg" media="(min-width: 768px)" />
       </head>

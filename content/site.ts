@@ -1,147 +1,81 @@
 export const siteConfig = {
   couple: {
-    bride: "Kaye Celine",
-    brideNickname: "Kaye Celine",
-    groom: "Mario",
-    groomNickname: "Mario",
+    bride: "Nomay",
+    brideNickname: "Nomay",
+    groom: "Kenneth",
+    groomNickname: "Kenneth",
   },
   wedding: {
-    date: "February 6, 2026",
-    time: "1:00 PM",
-    venue: "Orchid Garden Suites Manila",
-    tagline: "joyfully request the honor of your presence to celebrate their union in love",
-    theme: "Elegant Green Wedding",
-    motif: "Elegant Green Wedding",
+    date: "June 24, 2026",
+    time: "2:30 PM",
+    venue: "Our Lady of Lourdes Parish — Tagaytay",
+    tagline: "With the grace of God and the blessing of their families, joyfully request the honor of your presence to celebrate their union in love",
+    theme: "Dusty Pink & Beige",
+    motif: "Dusty Pink & Beige",
+    bibleVerse: '"We love because He first loved us." — 1 John 4:19',
   },
   details: {
     rsvp: {
-      deadline: "January 6, 2026",
+      deadline: "April 30, 2026",
     },
+    guestListNote: "With Respect: To maintain an intimate celebration, only the guests named on this invitation will be accommodated. Thank you for your understanding.",
   },
   ceremony: {
-    location: "Orchid Garden Suites Manila, 620 Pablo Ocampo Street, Malate, Manila",
-    venue: "Orchid Garden Suites Manila",
-    date: "February 6, 2026",
-    day: "Friday",
-    time: "1:00 PM",
-    entourageTime: "12:00 PM",
-    guestsTime: "12:30 PM",
+    location: "Our Lady of Lourdes Parish — Tagaytay",
+    venue: "Our Lady of Lourdes Parish",
+    date: "June 24, 2026",
+    day: "Wednesday",
+    time: "2:30 PM",
+    entourageTime: "2:00 PM",
+    guestsTime: "2:00 PM",
   },
   reception: {
-    location: "Orchid Garden Suites Manila, 620 Pablo Ocampo Street, Malate, Manila",
-    venue: "Orchid Garden Suites Manila",
-    date: "February 6, 2026",
-    time: "Reception to follow",
+    location: "Infinity Tagaytay Events Place",
+    venue: "Infinity Tagaytay Events Place",
+    date: "June 24, 2026",
+    time: "5:00 PM",
   },
   dressCode: {
-    theme: "Elegant Green Wedding",
-    colors: ["#8EA58B", "#A1857A", "#BCCFC0", "#E6CFC9", "#D9E5D7"],
+    theme: "Dusty Pink & Beige",
+    colors: ["#BE8782", "#E9AA9B", "#DEAB98", "#F2E1D1", "#FFFFFF"],
     sponsors: {
-      ladies: "Emerald Green Gown",
-      gentlemen: "Grey Barong and Black Slacks"
+      ladies: "Dusty Pink or Beige Gown",
+      gentlemen: "Grey Barong & Black Slacks"
     },
     guests: {
       ladies: "Formal Dress",
-      gentlemen: "Formal Long Sleeves and Slacks"
+      gentlemen: "Formal Long Sleeves & Slacks"
     },
-    note: "We would love to see you in formal attire. Please dress according to our wedding color palette. Strictly no jeans and no shorts."
+    note: "Formal Attire is encouraged. Please dress according to our Dusty Pink & Beige wedding motif. Strictly no jeans and no shorts."
   },
-  narrative: `We’re incredibly excited to share with you the beautiful journey of how our love began — a story filled with small moments that grew into something truly meaningful. From the very first spark to the countless memories that followed, every chapter has shaped who we are today. We want this space to be a little window into our hearts, a place where you can feel the warmth, laughter, and magic that brought us together.
+  unplugged: {
+    title: "Unplugged Ceremony",
+    message: "We invite you to be truly present as we say \"I do.\" Please turn off your devices and refrain from taking photos during the ceremony. Our photographer will capture every meaningful moment and we will gladly share the photos with you afterward."
+  },
+  narrative: `With the grace of God and the blessing of their families, Kenneth and Nomay joyfully invite you to witness and celebrate their union in love.
 
-Right now, we’re still putting the pieces together, choosing the words that best capture everything we’ve been through — the challenges we conquered, the joy we found in each other, and the love that continues to grow every single day. Hehehe, medyo kinikilig pa kami habang sinusulat!
+Their journey together is a testament to faith, patience, and the beautiful ways God brings two hearts together. From the first moment they met to the countless memories they've shared, every step has been guided by His love.
 
-Please stay tuned as we craft our full story. We can’t wait to share it with you soon. Something sweet, real, and beautiful is on its way. 💕✨`,
+As they prepare to say "I do," they are filled with gratitude for the family and friends who have supported them along the way. This celebration is not just about the beginning of their marriage, but also a moment to honor the love, prayers, and blessings that have brought them to this special day.`,
   colors: {
-    primary: "#8EA58B",
-    secondary: "#A1857A",
+    primary: "#BE8782",
+    secondary: "#E9AA9B",
+    tertiary: "#DEAB98",
+    background: "#F2E1D1",
+    white: "#FFFFFF",
   },
   snapShare: {
-    googleDriveLink: "https://drive.google.com/drive/folders/1qX5QzqMvbp_0kk5qQ7WR_aSo3LvNvqtW?usp=sharing",
-    instructions: "Help us capture our special day! Use our hashtag: #JUNfoundTheKAYEtoForever",
+    googleDriveLink: "https://drive.google.com/drive/folders/1guzuyFMLwy5RtcdDqOoAZ54_ICVwwKdr?usp=sharing",
+    instructions: "Help us capture our special day! Share your photos and tag them with our wedding hashtag.",
+  },
+  giftGuide: {
+    title: "Gift Guide",
+    message: "Your presence is our greatest gift. If you wish to give, a monetary gift to help us begin our new life together would mean so much to us."
   },
 }
 
-export const entourage = [
-  // Best Man & Maid/Matron of Honor
-  { role: "Best Man", name: "Red Casallo" },
-  { role: "Matron of Honor", name: "Imeeliza Timpug" },
+// Entourage members will be added by the couple
+export const entourage = []
 
-  // Parents of the Bride
-  { role: "Father", name: "Jaime Balajadia (Uncle)", group: "kate-family" },
-  { role: "Mother", name: "Eloida Ricohermoso", group: "kate-family" },
-
-  // Parents of the Groom
-  { role: "Brother", name: "Perry Ticbaen (Brother)", group: "christian-family" },
-  { role: "Mother", name: "Felicitas Ticbaen", group: "christian-family" },
-
-  // Bridesmaids
-  { role: "Bridesmaid", name: "Thea Lynn Dela Cruz" },
-  { role: "Bridesmaid", name: "Keara Zane A Cariño" },
-  { role: "Bridesmaid", name: "Fidnah Gracia Padallan" },
-  { role: "Bridesmaid", name: "Lorna Ladisla" },
-  { role: "Bridesmaid", name: "Carla Vanessa Tabilin" },
-  { role: "Bridesmaid", name: "Romela Tolentino" },
-  { role: "Bridesmaid", name: "Emmalyn Lipio" },
-  { role: "Bridesmaid", name: "Carmen Pascual" },
-  { role: "Bridesmaid", name: "Ciddie Manota" },
-
-  // Groomsmen
-  { role: "Groomsman", name: "Noah Alcaria" },
-  { role: "Groomsman", name: "Jervin Garcia" },
-  { role: "Groomsman", name: "Myric Mateo" },
-  { role: "Groomsman", name: "Caughvan Faustino" },
-  { role: "Groomsman", name: "Jayson Torquiano" },
-  { role: "Groomsman", name: "Jendah Egino" },
-  { role: "Groomsman", name: "Vincent Saguinsin" },
-  { role: "Groomsman", name: "Frederick Manota" },
-  { role: "Groomsman", name: "Emerson Sulit" },
-
-  // Secondary Sponsors
-  // Candle Sponsors
-  { role: "Bridesmaid", name: "Romela Tolentino", group: "candle" },
-  // Veil Sponsors
-  { role: "Bridesmaid", name: "Carla Vanessa Tabilin", group: "veil" },
-  // Cord Sponsors
-  { role: "Bridesmaid", name: "Emmalyn Lipio", group: "cord" },
-
-  // Flower Girls and Little Bride
-  { role: "Flower Girl", name: "Kirsten Elija Leyson" },
-  { role: "Flower Girl", name: "Blake Juan" },
-  { role: "Flower Girl", name: "Reign Arastel Rivera" },
-  { role: "Little Bride", name: "Paige Yael Ticbaen" },
-
-  // Ring / Coin Bearers
-  { role: "Ring Bearer", name: "Khaleb Dwayne M. Beltran" },
-  { role: "Coin Bearer", name: "Lucas Rhaiden Beltran" },
-  { role: "Ring Bearer", name: "Dean James Ticbaen" },
-]
-
-export const principalSponsors = [
-  // Paired from provided Male and Female Sponsors (order-based)
-  { name: "Mr. Jony Balao", spouse: "Mrs. Conception Balao" },
-  { name: "Mr. Cresencio Francisco", spouse: "Dr. Editha Francisco" },
-  { name: "Mr. Aurelio Sab-it", spouse: "Mrs. Ester Sab-it" },
-  { name: "Mr. Pio McLiing", spouse: "Mrs. Edna Boloma" },
-  { name: "Mr. Fabian Dupiano", spouse: "Mrs. Mary Christine Dupiano" },
-  { name: "Mr. Roberto Dosdos", spouse: "Mrs. Angelica Dosdos" },
-  { name: "Mr. George Sacla", spouse: "Mrs. Minda De Bolt Sacla" },
-  { name: "Mr. Elmo Casallo", spouse: "Mrs. Nora Casallo" },
-  { name: "Engr. Jimmy Atayoc Sr", spouse: "Mrs. Mercedes Atayoc" },
-  { name: "Mr. Tomas Moyongan", spouse: "Mrs. Betty Moyongan" },
-  { name: "Mr. Roger Balantin", spouse: "Mrs. Delia Balantin" },
-  { name: "Honorable Mayor Roderick Awingan", spouse: "Mrs. ____ Awingan" },
-  { name: "Engr Roy Kepes", spouse: "Vice Gove MaryRose Kepes Fongwan" },
-  { name: "Mr. Bobos Nestor Fongwan", spouse: "Mrs. Marga Sison" },
-  { name: "Mr. Junvic Suguinsin", spouse: "Mrs. Lavenia Inson" },
-  { name: "Mr. Salino Dosdos Jr", spouse: "Mrs. Gina Guiang" },
-  { name: "Mr. Pampilo Balajadia", spouse: "Mrs. Angelica Balajadia" },
-  { name: "Mr. Alan M. Serduar", spouse: "Mrs. Oliva Serduar" },
-  { name: "Mr. Miguel Franco", spouse: "Mrs. Angela Balajadia" },
-  // Remaining Female Sponsors without paired male
-  { name: "Mrs. Carina C. Watanabe", spouse: "" },
-  { name: "Mrs. Cecile Palilio", spouse: "" },
-  { name: "Mrs. Nida Saguinsin", spouse: "" },
-  { name: "Mrs. Araceli Pitogo", spouse: "" },
-  { name: "Mrs. Alda Unidad", spouse: "" },
-  { name: "Mrs. Reine Bernadeth Bolanos", spouse: "" },
-]
+// Principal sponsors will be added by the couple
+export const principalSponsors = []
