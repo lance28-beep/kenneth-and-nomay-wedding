@@ -373,7 +373,7 @@ export function SnapShare() {
               </p>
               <div className="flex items-center justify-center gap-2">
                 <div className="text-center">
-                  <span className="block font-playfair text-[#BE8782] font-bold text-base sm:text-lg md:text-xl">– {siteConfig.couple.groomName} & {siteConfig.couple.brideName} –</span>
+                  <span className="block font-playfair text-[#BE8782] font-bold text-base sm:text-lg md:text-xl">– Kenneth & Nomay –</span>
                 </div>
               </div>
             </div>
