@@ -49,6 +49,9 @@ export function Details() {
   const ceremonyMapsLink = `https://maps.google.com/?q=${encodeURIComponent(siteConfig.ceremony.location)}`
   const receptionMapsLink = `https://maps.google.com/?q=${encodeURIComponent(siteConfig.reception.location)}`
 
+  const sponsorPalette = ["#E8E0D5", "#D1AD97", "#C49E92", "#C19A83", "#9A7A6B"]
+  const guestPalette = ["#E8E0D3", "#D1AD97", "#C49F90", "#F7CDCF", "#DDB2AC"]
+
   const openInMaps = (link: string) => {
     window.open(link, '_blank', 'noopener,noreferrer')
   }
@@ -173,12 +176,9 @@ export function Details() {
                 <h4 className="text-base sm:text-xl font-semibold">{siteConfig.ceremony.venue}</h4>
                 <p className="text-xs sm:text-sm text-[#4A4A4A]/90 leading-relaxed">{siteConfig.ceremony.location}</p>
               </div>
-              <div className="grid grid-cols-2 gap-1.5 sm:gap-2 text-left">
+              <div className="grid grid-cols-1 gap-1.5 sm:gap-2 text-left">
                 {[
-                  { label: "Ceremony begins", value: siteConfig.ceremony.time },
-                  { label: "Entourage call time", value: siteConfig.ceremony.entourageTime },
-                  { label: "Guest arrival", value: siteConfig.ceremony.guestsTime },
-                  { label: "Date", value: siteConfig.ceremony.day },
+                  { label: "Date", value: siteConfig.ceremony.date },
                 ].map((item) => (
                   <div key={item.label} className="rounded-md border border-[#E9AA9B] bg-white/70 px-2.5 py-2 shadow-sm">
                     <p className="text-[9px] sm:text-[10px] font-semibold tracking-[0.18em] text-[#BE8782] uppercase mb-0.5">{item.label}</p>
@@ -251,12 +251,9 @@ export function Details() {
                 <h4 className="text-base sm:text-xl font-semibold">{siteConfig.reception.venue}</h4>
                 <p className="text-xs sm:text-sm text-[#4A4A4A]/90 leading-relaxed">{siteConfig.reception.location}</p>
               </div>
-              <div className="grid grid-cols-2 gap-1.5 sm:gap-2 text-left">
+              <div className="grid grid-cols-1 gap-1.5 sm:gap-2 text-left">
                 {[
-                  { label: "Reception starts", value: siteConfig.reception.time },
-                  { label: "Dinner begins", value: "6:00 PM" },
-                  { label: "Program", value: "8:00 PM" },
-                  { label: "Send-off", value: "10:00 PM" },
+                  { label: "Date", value: siteConfig.reception.date },
                 ].map((item) => (
                   <div key={item.label} className="rounded-md border border-[#F2E1D1] bg-white/70 px-2.5 py-2 shadow-sm">
                     <p className="text-[9px] sm:text-[10px] font-semibold tracking-[0.18em] text-[#DEAB98] uppercase mb-0.5">{item.label}</p>
@@ -321,16 +318,44 @@ export function Details() {
                 <div className="border-t border-[#F2E1D1] pt-4">
                   <h5 className="font-bold text-xs sm:text-sm text-[#BE8782] mb-2">Principal Sponsors</h5>
                   <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
-                    <p className="text-[#4A4A4A]"><strong>Gentlemen:</strong> Grey Barong & Black Slacks</p>
-                    <p className="text-[#4A4A4A]"><strong>Ladies:</strong> Dusty Pink or Beige Gown</p>
+                    <p className="text-[#4A4A4A]">
+                      Barong Tagalog and long gowns in curated shades of brown.
+                    </p>
+                    <div className="pt-1">
+                      <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.15em] text-[#BE8782] mb-1">Palette</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {sponsorPalette.map((color) => (
+                          <span
+                            key={color}
+                            className="w-7 h-7 rounded-full border border-white/50 shadow-sm"
+                            style={{ backgroundColor: color }}
+                            title={color}
+                          />
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
                 
                 <div className="border-t border-[#F2E1D1] pt-4">
                   <h5 className="font-bold text-xs sm:text-sm text-[#BE8782] mb-2">Wedding Guests</h5>
                   <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
-                    <p className="text-[#4A4A4A]"><strong>Gentlemen:</strong> Formal Long Sleeves & Slacks</p>
-                    <p className="text-[#4A4A4A]"><strong>Ladies:</strong> Formal Dress</p>
+                    <p className="text-[#4A4A4A]">
+                      Formal attire in soft light-brown and dusty pink tones is lovingly encouraged.
+                    </p>
+                    <div className="pt-1">
+                      <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.15em] text-[#BE8782] mb-1">Palette</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {guestPalette.map((color) => (
+                          <span
+                            key={color}
+                            className="w-7 h-7 rounded-full border border-white/50 shadow-sm"
+                            style={{ backgroundColor: color }}
+                            title={color}
+                          />
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -338,27 +363,6 @@ export function Details() {
             <p className="text-[11px] sm:text-sm text-center mt-2.5 sm:mt-3 text-[#BE8782] font-semibold">
               Note: Strictly no jeans and no shorts.
             </p>
-          </div>
-
-          {/* Unplugged Ceremony */}
-          <div className="relative rounded-2xl border border-white/30 bg-white/80 backdrop-blur-lg shadow-[0_18px_40px_rgba(190,135,130,0.15)] p-3.5 sm:p-5 overflow-hidden">
-            <div className="flex items-center justify-center gap-2 mb-2.5 sm:mb-3 relative z-10">
-              <div className="p-1.5 rounded-full shadow-md bg-white/80 border border-[#BE8782]/20">
-                <Camera className="w-3.5 h-3.5 text-[#BE8782]" />
-              </div>
-              <h4 className="font-bold text-xs sm:text-base text-[#BE8782]">Unplugged Ceremony</h4>
-            </div>
-            <div className="space-y-2.5 sm:space-y-3 text-center">
-              <p className="text-xs sm:text-sm text-[#4A4A4A]">
-                We invite you to be truly present as we say "I do."
-              </p>
-              <p className="text-xs sm:text-sm text-[#4A4A4A]">
-                Please turn off your devices and refrain from taking photos during the ceremony.
-              </p>
-              <p className="text-xs sm:text-sm text-[#4A4A4A]">
-                Our photographer will capture every meaningful moment and we will gladly share the photos with you afterward.
-              </p>
-            </div>
           </div>
 
           {/* Travel & Parking - Compact */}

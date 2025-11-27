@@ -46,14 +46,14 @@ export default function Home() {
           <Countdown />
           <Narrative />
           <Gallery />
-          <Messages />
+          {/* <Messages /> */}
           <Details />
-          <WeddingTimeline />
+          {/* <WeddingTimeline /> */}
           <Entourage />
           <PrincipalSponsors />
           <GuestList />
-          <BookOfGuests />
-          <Registry />
+          {/* <BookOfGuests /> */}
+          {/* <Registry /> */}
           <FAQ />
           <SnapShare />
           <Footer />

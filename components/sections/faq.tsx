@@ -11,20 +11,11 @@ interface FAQItem {
 }
 
 const faqItems: FAQItem[] = [
-  {
-    question: "Will the ceremony and reception be held in the same place?",
-    answer:
-      "No. The ceremony will be at Our Lady of Lourdes Parish — Tagaytay, and the reception will be at Infinity Tagaytay Events Place.",
-  },
+
   {
     question: "What time should I arrive?",
     answer:
       "Please arrive at the church a little before the suggested guest arrival time, so you can be comfortably seated and settled before the procession begins.",
-  },
-  {
-    question: "Is there parking?",
-    answer:
-      "Yes, parking is available at both the church and the reception venue. We still recommend arriving early to find a comfortable spot.",
   },
   {
     question: "What if I arrive late?",
@@ -36,11 +27,7 @@ const faqItems: FAQItem[] = [
     answer:
       "Yes. Our coordinators will guide you to your assigned table when you arrive at the reception.",
   },
-  {
-    question: "What is the attire?",
-    answer:
-      "Formal attire is encouraged. Please follow our dusty pink and beige wedding motif as a guide, and kindly avoid jeans and shorts.",
-  },
+
   {
     question: "Can I bring a plus one or children?",
     answer:
@@ -61,21 +48,13 @@ const faqItems: FAQItem[] = [
     answer:
       "Yes. We kindly request that guests refrain from using phones and cameras during the ceremony so everyone can be fully present. Our photographers will capture the important moments for us all to enjoy later.",
   },
-  {
-    question: "How can I send a message or wish for the couple?",
-    answer:
-      "You can leave a heartfelt note through the Messages section on this site. Your wishes will be part of our keepsake book of guests.",
-  },
+
   {
     question: "Do you have a gift registry?",
     answer:
       "Your presence is our greatest gift. If you wish to give, details about monetary gifts and payment options are available in the Gift Guide section.",
   },
-  {
-    question: "How can I see who else is attending?",
-    answer:
-      "Confirmed RSVPs are lovingly displayed in our Book of Guests section so you can see who is celebrating with us.",
-  },
+
   {
     question: "How can I help the couple enjoy their day?",
     answer:
