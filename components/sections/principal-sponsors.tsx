@@ -132,35 +132,6 @@ export function PrincipalSponsors() {
         <div className="absolute bottom-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E9AA9B]/45 to-transparent" />
       </div>
 
-      {/* Corner decorations – matched to countdown section */}
-      <img
-        src="/decoration/corner-down-left.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute bottom-0 left-0 w-40 sm:w-56 md:w-64 lg:w-72 xl:w-80 opacity-90"
-        loading="lazy"
-      />
-      <img
-        src="/decoration/corner-down-left.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute bottom-0 right-0 w-40 sm:w-56 md:w-64 lg:w-72 xl:w-80 opacity-90 scale-x-[-1]"
-        loading="lazy"
-      />
-      <img
-        src="/decoration/top-right-corner.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute top-0 right-0 w-48 sm:w-64 md:w-80 lg:w-96 xl:w-[28rem] opacity-95"
-        loading="lazy"
-      />
-      <img
-        src="/decoration/top-right-corner.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute top-0 left-0 w-48 sm:w-64 md:w-80 lg:w-96 xl:w-[28rem] opacity-95 scale-x-[-1]"
-        loading="lazy"
-      />
 
       {/* Section Header */}
       <div ref={sectionRef} className={`relative z-10 text-center mb-4 sm:mb-6 md:mb-8 lg:mb-12 px-3 sm:px-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>

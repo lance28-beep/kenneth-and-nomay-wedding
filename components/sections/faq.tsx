@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
 import { ChevronDown } from "lucide-react"
 import { Section } from "@/components/section"
 
@@ -99,35 +98,6 @@ export function FAQ() {
         <div className="absolute bottom-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E6CFC9]/40 to-transparent" />
       </div>
 
-      {/* Corner decorations – matched to Countdown / Principal Sponsors */}
-      <img
-        src="/decoration/corner-down-left.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute bottom-0 left-0 w-40 sm:w-56 md:w-64 lg:w-72 xl:w-80 opacity-90"
-        loading="lazy"
-      />
-      <img
-        src="/decoration/corner-down-left.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute bottom-0 right-0 w-40 sm:w-56 md:w-64 lg:w-72 xl:w-80 opacity-90 scale-x-[-1]"
-        loading="lazy"
-      />
-      <img
-        src="/decoration/top-right-corner.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute top-0 right-0 w-48 sm:w-64 md:w-80 lg:w-96 xl:w-[28rem] opacity-95"
-        loading="lazy"
-      />
-      <img
-        src="/decoration/top-right-corner.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none select-none absolute top-0 left-0 w-48 sm:w-64 md:w-80 lg:w-96 xl:w-[28rem] opacity-95 scale-x-[-1]"
-        loading="lazy"
-      />
 
       {/* Section Header */}
       <div className="relative z-10 text-center mb-4 sm:mb-6 md:mb-8 lg:mb-12 px-3 sm:px-4">

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo, useRef } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { siteConfig } from "@/content/site"
 import StaggeredMenu from "./StaggeredMenu"
 
@@ -100,18 +101,17 @@ export function Navbar() {
         <div className="flex justify-between items-center h-14 sm:h-16 md:h-20">
           <Link href="#home" className="flex-shrink-0 group relative z-10">
             <div className="relative">
-              <h1 
-                className="windsong-medium text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#F2E1D1] group-hover:scale-105 group-active:scale-100 transition-all duration-500"
+              <Image
+                src="/monogram/navmonogram.png"
+                alt="Kenneth & Nomay Monogram"
+                width={64}
+                height={64}
+                className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 object-contain group-hover:scale-105 group-active:scale-100 transition-all duration-500"
                 style={{
-                  textShadow: "0 2px 8px rgba(0,0,0,0.3), 0 0 20px rgba(242,225,209,0.25)"
+                  filter: "brightness(0) invert(1)",
                 }}
-              >
-                Kenneth & Nomay
-              </h1>
+              />
             </div>
-            
-            {/* Subtle background glow on hover */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#BE8782]/0 via-[#DEAB98]/20 to-[#BE8782]/0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl -z-10" />
           </Link>
 
           <div className="hidden md:flex gap-1 items-center">

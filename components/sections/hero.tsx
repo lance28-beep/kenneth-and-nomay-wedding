@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useMemo } from "react"
 import { Heart, Sparkles, Download } from "lucide-react"
+import { siteConfig } from "@/content/site"
 
 // Temporary hero background per client request
 const heroBackgroundImage = "/images/hero Background.jpg"
@@ -76,6 +77,90 @@ export function Hero() {
     }
   }, [imagesLoaded])
 
+  // Countdown timer logic
+  const ceremonyDate = siteConfig.ceremony.date
+  const ceremonyTimeDisplay = siteConfig.ceremony.time
+  const [ceremonyMonth = "June", ceremonyDayRaw = "24", ceremonyYear = "2026"] = ceremonyDate.split(" ")
+  const ceremonyDayNumber = ceremonyDayRaw.replace(/[^0-9]/g, "") || "24"
+  
+  // Parse the time: "2:30 PM" -> 14:30
+  const timeStr = ceremonyTimeDisplay.split(",")[0].trim()
+  const monthMap: { [key: string]: string } = {
+    "January": "01", "February": "02", "March": "03", "April": "04",
+    "May": "05", "June": "06", "July": "07", "August": "08",
+    "September": "09", "October": "10", "November": "11", "December": "12"
+  }
+  const monthNum = monthMap[ceremonyMonth] || "06"
+  const dayNum = ceremonyDayNumber.padStart(2, "0")
+  
+  const timeMatch = timeStr.match(/(\d+):(\d+)\s*(AM|PM)/i)
+  let hour = 14 // default 2 PM
+  let minutes = 30
+  
+  if (timeMatch) {
+    hour = parseInt(timeMatch[1])
+    minutes = parseInt(timeMatch[2])
+    const ampm = timeMatch[3].toUpperCase()
+    if (ampm === "PM" && hour !== 12) hour += 12
+    if (ampm === "AM" && hour === 12) hour = 0
+  }
+  
+  // Create date in GMT+8 (PH Time)
+  const parsedTargetDate = new Date(Date.UTC(
+    parseInt(ceremonyYear),
+    parseInt(monthNum) - 1,
+    parseInt(dayNum),
+    hour - 8, // Convert GMT+8 to UTC
+    minutes,
+    0
+  ))
+  
+  const targetTimestamp = Number.isNaN(parsedTargetDate.getTime())
+    ? new Date(Date.UTC(2026, 5, 24, 6, 30, 0)).getTime() // Fallback: June 24, 2026, 2:30 PM GMT+8 = 6:30 AM UTC
+    : parsedTargetDate.getTime()
+
+  interface TimeLeft {
+    days: number
+    hours: number
+    minutes: number
+    seconds: number
+  }
+
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  })
+
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const targetDate = targetTimestamp
+      const now = new Date().getTime()
+      const difference = targetDate - now
+
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60),
+        })
+      } else {
+        setTimeLeft({
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0,
+        })
+      }
+    }
+
+    calculateTimeLeft()
+    const timer = setInterval(calculateTimeLeft, 1000)
+    return () => clearInterval(timer)
+  }, [targetTimestamp])
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#F2E1D1]">
       <div className="absolute inset-0 w-full h-full">
@@ -124,16 +209,6 @@ export function Hero() {
               </p>
               <p className="text-[9px] sm:text-xs md:text-sm lg:text-base tracking-[0.1em] md:tracking-[0.15em] lg:tracking-[0.18em] uppercase">
                 AND THE BLESSING OF THEIR FAMILIES
-              </p>
-            </div>
-
-            {/* Bible Verse */}
-            <div className="max-w-2xl text-[#FFFFFF] italic text-center px-4" style={{ textShadow: "0 6px 18px rgba(0,0,0,0.45)" }}>
-              <p className="text-[10px] sm:text-xs md:text-sm lg:text-base tracking-wide">
-                "We love because He first loved us."
-              </p>
-              <p className="text-[9px] sm:text-[10px] md:text-xs lg:text-sm tracking-wider mt-1">
-                — 1 John 4:19
               </p>
             </div>
 
@@ -227,26 +302,44 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Ceremony & location */}
-            <div className="text-center space-y-1.5 md:space-y-2 text-[#FFFFFF] uppercase" style={{ textShadow: "0 6px 18px rgba(0,0,0,0.45)" }}>
-              <div>
-                <p className="text-[9px] sm:text-xs md:text-sm lg:text-base tracking-[0.12em] md:tracking-[0.16em] lg:tracking-[0.2em]">
-                  Ceremony
-                </p>
-                <p className="text-[10px] sm:text-xs md:text-sm tracking-[0.3em] sm:tracking-[0.35em]">
-                  Our Lady of Lourdes Parish
-                </p>
-                <p className="text-[9px] sm:text-xs md:text-sm tracking-[0.15em] sm:tracking-[0.2em]">
-                  Tagaytay
-                </p>
-              </div>
-              <div>
-                <p className="text-[9px] sm:text-xs md:text-sm lg:text-base tracking-[0.12em] md:tracking-[0.16em] lg:tracking-[0.2em]">
-                  Reception
-                </p>
-                <p className="text-[10px] sm:text-xs md:text-sm tracking-[0.3em] sm:tracking-[0.35em]">
-                  Infinity Tagaytay Events Place
-                </p>
+            {/* Countdown Timer */}
+            <div className="mt-4 md:mt-6 text-center">
+              <div className="flex items-center justify-center gap-2 sm:gap-3 md:gap-4 flex-wrap">
+                <div className="flex flex-col items-center gap-1">
+                  <div className="text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-bold text-white leading-none" style={{ textShadow: "0 6px 18px rgba(0,0,0,0.45)" }}>
+                    {String(timeLeft.days).padStart(2, '0')}
+                  </div>
+                  <p className="text-[8px] sm:text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-white/90" style={{ textShadow: "0 4px 12px rgba(0,0,0,0.45)" }}>
+                    Days
+                  </p>
+                </div>
+                <span className="text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] text-white/80 font-light">:</span>
+                <div className="flex flex-col items-center gap-1">
+                  <div className="text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-bold text-white leading-none" style={{ textShadow: "0 6px 18px rgba(0,0,0,0.45)" }}>
+                    {String(timeLeft.hours).padStart(2, '0')}
+                  </div>
+                  <p className="text-[8px] sm:text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-white/90" style={{ textShadow: "0 4px 12px rgba(0,0,0,0.45)" }}>
+                    Hours
+                  </p>
+                </div>
+                <span className="text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] text-white/80 font-light">:</span>
+                <div className="flex flex-col items-center gap-1">
+                  <div className="text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-bold text-white leading-none" style={{ textShadow: "0 6px 18px rgba(0,0,0,0.45)" }}>
+                    {String(timeLeft.minutes).padStart(2, '0')}
+                  </div>
+                  <p className="text-[8px] sm:text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-white/90" style={{ textShadow: "0 4px 12px rgba(0,0,0,0.45)" }}>
+                    Minutes
+                  </p>
+                </div>
+                <span className="text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] text-white/80 font-light">:</span>
+                <div className="flex flex-col items-center gap-1">
+                  <div className="text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-bold text-white leading-none" style={{ textShadow: "0 6px 18px rgba(0,0,0,0.45)" }}>
+                    {String(timeLeft.seconds).padStart(2, '0')}
+                  </div>
+                  <p className="text-[8px] sm:text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-white/90" style={{ textShadow: "0 4px 12px rgba(0,0,0,0.45)" }}>
+                    Seconds
+                  </p>
+                </div>
               </div>
             </div>
 

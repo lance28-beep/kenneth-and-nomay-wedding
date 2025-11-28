@@ -3,25 +3,11 @@ import { Section } from "@/components/section"
 import { siteConfig } from "@/content/site"
 import Stack from "@/components/stack"
 import { motion } from "motion/react"
-import Image from "next/image"
 
 
 export function Narrative() {
   return (
     <Section id="narrative" className="relative py-12 md:py-16 lg:py-20 overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src="/decoration/background2.jpg"
-          alt="Background"
-          fill
-          sizes="100vw"
-          priority={false}
-          className="object-cover object-center"
-          aria-hidden="true"
-        />
-      </div>
-      
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <motion.div 
@@ -32,7 +18,7 @@ export function Narrative() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary mb-4 md:mb-6 text-balance drop-shadow-lg tracking-tight">
-            <span className="text-[#BE8782]">Our Love Story</span>
+            <span className="text-white">Our Love Story</span>
           </h2>
           
           {/* Decorative flourish with motif colors */}
@@ -90,13 +76,13 @@ export function Narrative() {
               />
 
               <motion.p 
-                className="text-center text-xs md:text-sm text-[#324D3E] mt-4 font-sans font-medium tracking-wide"
+                className="text-center text-xs md:text-sm text-white mt-4 font-sans font-medium tracking-wide"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 1 }}
               >
-                <span className="text-[#738A6E]">✨</span> Drag to explore our moments <span className="text-[#738A6E]">✨</span>
+                <span className="text-white">✨</span> Drag to explore our moments <span className="text-white">✨</span>
               </motion.p>
             </div>
           </div>

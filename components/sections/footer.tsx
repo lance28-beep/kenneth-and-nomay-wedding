@@ -124,25 +124,6 @@ export function Footer() {
         {/* Decorative horizontal line */}
         <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#DEAB98]/45 to-transparent" />
 
-        {/* Corner floral decorations (matching other sections) */}
-        <Image
-          src="/decoration/corner-down-left.png"
-          alt=""
-          width={256}
-          height={256}
-          aria-hidden="true"
-          className="pointer-events-none select-none absolute bottom-0 left-0 w-40 sm:w-52 md:w-60 lg:w-64 opacity-90"
-          loading="lazy"
-        />
-        <Image
-          src="/decoration/top-right-corner.png"
-          alt=""
-          width={288}
-          height={288}
-          aria-hidden="true"
-          className="pointer-events-none select-none absolute top-0 right-0 w-40 sm:w-52 md:w-60 lg:w-72 opacity-95"
-          loading="lazy"
-        />
       </div>
       
       {/* Monogram - centered at top */}
